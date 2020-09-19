@@ -12,7 +12,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const P: PStyledProps = styled.p`
+export const P: React.FC<PStyledProps> = styled.p`
     ${variants}
     ${color}
     ${typography}

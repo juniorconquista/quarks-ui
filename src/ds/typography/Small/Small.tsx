@@ -12,7 +12,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const Small: SmallStyledProps = styled.small`
+export const Small: React.FC<SmallStyledProps> = styled.small`
     ${variants}
     ${color}
     ${typography}

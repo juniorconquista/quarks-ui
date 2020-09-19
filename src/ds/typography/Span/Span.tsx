@@ -12,7 +12,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const Span: SpanStyledProps = styled.span`
+export const Span: React.FC<SpanStyledProps> = styled.span`
     ${variants}
     ${color}
     ${typography}

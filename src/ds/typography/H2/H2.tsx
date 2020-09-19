@@ -18,7 +18,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const H2: H2StyledProps = styled.h2`
+export const H2: React.FC<H2StyledProps> = styled.h2`
     ${variants}
     ${color}
     ${typography}

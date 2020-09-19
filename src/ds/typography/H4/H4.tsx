@@ -18,7 +18,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const H4: H4StyledProps = styled.h4`
+export const H4: React.FC<H4StyledProps> = styled.h4`
     ${variants}
     ${color}
     ${typography}

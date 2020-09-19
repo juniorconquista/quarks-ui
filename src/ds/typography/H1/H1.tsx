@@ -7,7 +7,7 @@ const variants = variant({
     variants: {
         base: {
             color: 'text',
-            fontSize: 'fontSizes.8',
+            fontSize: 8,
         },
         get light() {
             return {
@@ -18,7 +18,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const H1: H1StyledProps = styled.h1`
+export const H1: React.FC<H1StyledProps> = styled.h1`
     ${variants}
     ${color}
     ${typography}

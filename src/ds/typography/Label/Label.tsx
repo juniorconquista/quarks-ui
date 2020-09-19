@@ -12,7 +12,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const Label: LabelStyledProps = styled.label`
+export const Label: React.FC<LabelStyledProps> = styled.label`
     ${variants}
     ${color}
     ${typography}

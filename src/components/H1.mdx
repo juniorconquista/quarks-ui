@@ -1,0 +1,24 @@
+---
+name: H1
+menu: Components
+---
+
+import { ThemeProvider } from 'styled-components';
+import { Playground, Props } from 'docz';
+import { H1 } from '../ds/typography';
+import * as theme from '../ds/theme';
+
+# H1
+
+## Properties
+
+<Props of={H1} />
+
+## Basic usage
+
+<Playground>
+    <ThemeProvider theme={{ ...theme.default }}>
+        <H1 styling="base">Base</H1>
+        <H1 styling="light">Base</H1>
+    </ThemeProvider>
+</Playground>
