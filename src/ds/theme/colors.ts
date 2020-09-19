@@ -46,13 +46,13 @@ export default {
         default: '#ffffff',
         dark: '#F26522',
     },
-    text: {
-        light: '#ffffff',
-        dark: '#1B2b3a',
-    },
     disabled: '#9398a6',
     primaries: ['#d7edf4'],
     whites: ['#eeeeef', '#f2fbfe'],
     blacks: ['#35363a'],
     hovers: ['#f5f7f7'],
+
+    get text(): string {
+        return this.dark ? '#FFFFFF' : '#1B2b3a';
+    },
 };

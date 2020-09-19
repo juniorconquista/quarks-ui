@@ -13,12 +13,15 @@ export const space = {
 };
 
 export const fontSizes = [
-    '0.5rem',
-    '0.85rem',
-    '1rem',
-    '1.5rem',
-    '1.8rem',
-    '2rem',
+    '0.5rem', // 8px
+    '0.67rem', // 10.72px - H6 / SMALL
+    '0.83rem', // 13.28px - H5
+    '0.875rem', // 14px
+    '1rem', // 16px - H4/P/SPAN
+    '1.17rem', // 18.72px - H3
+    '1.5rem', // 24px - H2
+    '1.8rem', // 28.8px
+    '2rem', // 32px - H1
 ];
 
 export const buttonSizes = {

@@ -1,28 +1,22 @@
 import styled from 'styled-components';
 import { variant, VariantArgs, color, typography, space } from 'styled-system';
-import { H1StyledProps } from './h1.types';
+import { PStyledProps } from './p.types';
 
 const variants = variant({
     prop: 'styling',
     variants: {
         base: {
             color: 'text',
-            fontSize: 'fontSizes.8',
-        },
-        get light() {
-            return {
-                ...this.base,
-                fontWeight: 'normal',
-            };
+            fontSize: 'fontSizes.4',
         },
     },
 } as VariantArgs);
 
-export const H1: H1StyledProps = styled.h1`
+export const P: PStyledProps = styled.p`
     ${variants}
     ${color}
     ${typography}
     ${space}
 `;
 
-export default H1;
+export default P;

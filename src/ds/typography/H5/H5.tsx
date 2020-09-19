@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { variant, VariantArgs, color, typography, space } from 'styled-system';
-import { H1StyledProps } from './h1.types';
+import { H5StyledProps } from './h5.types';
 
 const variants = variant({
     prop: 'styling',
     variants: {
         base: {
             color: 'text',
-            fontSize: 'fontSizes.8',
+            fontSize: 'fontSizes.2',
         },
         get light() {
             return {
@@ -18,11 +18,11 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const H1: H1StyledProps = styled.h1`
+export const H5: H5StyledProps = styled.h5`
     ${variants}
     ${color}
     ${typography}
     ${space}
 `;
 
-export default H1;
+export default H5;

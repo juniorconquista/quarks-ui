@@ -1,9 +1,9 @@
 import { DefaultStyleProps } from '../../theme/types';
 import { TypographyProps } from 'styled-system';
 
-export type H1StyledProps = DefaultStyleProps &
+export type SmallStyledProps = DefaultStyleProps &
     TypographyProps & {
-        styling: 'base' | 'light';
+        styling: 'base';
     };
 
-export interface H1Props {}
+export interface SmallProps {}
