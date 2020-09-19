@@ -10,6 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/juniorconquista/quarks-ui.git"
   },
+  "keywords": [
+    "components",
+    "design",
+    "design system",
+    "react",
+    "ui",
+    "ux"
+  ],
   "author": "Júnior Conquista <conquista.engcomp@gmail.com>",
   "license": "MIT",
   "bugs": {
