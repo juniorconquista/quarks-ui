@@ -1,5 +1,5 @@
 export default {
-    dark: true,
+    dark: false,
     primary: {
         default: '#F26522',
         dark: '#d14b0c',
@@ -36,7 +36,12 @@ export default {
         light: '#11d4d4',
         contrast: '#ffffff',
     },
-    disabled: '#9398a6',
+    grays: {
+        default: '#9ba8b2',
+        dark: '#4b4b4b',
+        light: '#eeeeef',
+        contrast: '#f5f5f5',
+    },
     background: {
         default: '#ffffff',
         dark: '#F26522',
@@ -45,13 +50,8 @@ export default {
         light: '#ffffff',
         dark: '#1B2b3a',
     },
+    disabled: '#9398a6',
     primaries: ['#d7edf4'],
-    grays: {
-        default: '#9ba8b2',
-        dark: '#4b4b4b',
-        light: '#eeeeef',
-        contrast: '#f5f5f5',
-    },
     whites: ['#eeeeef', '#f2fbfe'],
     blacks: ['#35363a'],
     hovers: ['#f5f7f7'],
