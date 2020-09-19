@@ -1,0 +1,22 @@
+{
+  "name": "quarks-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniorconquista/quarks-ui.git"
+  },
+  "author": "Júnior Conquista <conquista.engcomp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juniorconquista/quarks-ui/issues"
+  },
+  "homepage": "https://github.com/juniorconquista/quarks-ui#readme",
+  "devDependencies": {
+    "@types/node": "^14.11.1"
+  }
+}
