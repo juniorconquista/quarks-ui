@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "docz": "docz dev",
         "format": "prettier --write \"**/*.{json,md,ts,tsx}\" ",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -37,6 +38,9 @@
         "pretty-quick": "^3.0.2"
     },
     "dependencies": {
+        "docz": "next",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
         "styled-components": "^5.2.0",
         "styled-system": "^5.1.5"
     }

@@ -21,7 +21,7 @@ const variants = variant({
         get error() {
             return {
                 ...this.base,
-                color: 'reds.1',
+                color: 'danger.primary',
             };
         },
         get baseLight() {
