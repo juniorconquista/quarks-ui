@@ -1,6 +1,6 @@
 ---
 name: H1
-menu: Components
+menu: Typography
 ---
 
 import { ThemeProvider } from 'styled-components';
@@ -10,6 +10,12 @@ import * as theme from '../ds/theme';
 
 # H1
 
+Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+
+**Note:** Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
 ## Properties
 
 <Props of={H1} />
@@ -18,7 +24,14 @@ import * as theme from '../ds/theme';
 
 <Playground>
     <ThemeProvider theme={{ ...theme.default }}>
-        <H1 styling="base">Base</H1>
+        <H1 styling="light">Base</H1>
+    </ThemeProvider>
+</Playground>
+
+## With different weights
+
+<Playground>
+    <ThemeProvider theme={{ ...theme.default }}>
         <H1 styling="light">Base</H1>
     </ThemeProvider>
 </Playground>
