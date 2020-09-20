@@ -1,6 +1,7 @@
+import { SFC } from 'react';
 import styled from 'styled-components';
 import { variant, VariantArgs, color, typography, space } from 'styled-system';
-import { H1StyledProps } from './h1.types';
+import { H1Props } from './h1.types';
 
 const variants = variant({
     prop: 'styling',
@@ -18,7 +19,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const H1: React.FC<H1StyledProps> = styled.h1`
+export const H1: SFC<H1Props> = styled.h1`
     ${variants}
     ${color}
     ${typography}
