@@ -3,10 +3,8 @@ name: H5
 menu: Typography
 ---
 
-import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
 import { H5 } from '../ds/typography';
-import * as theme from '../ds/theme';
 
 # H5
 
@@ -25,9 +23,7 @@ Each HTML heading has a default size. However, you can specify the size for any 
 ## Basic usage
 
 <Playground>
-    <ThemeProvider theme={{ ...theme.default }}>
-        <H5 styling="base">Base</H5>
-    </ThemeProvider>
+    <H5 styling="base">Base</H5>
 </Playground>
 
 ## Customization

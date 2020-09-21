@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import { variant, VariantArgs, color, typography, space } from 'styled-system';
-import { SmallStyledProps } from './small.types';
+import { SmallProps } from './small.types';
 
 const variants = variant({
     prop: 'styling',
     variants: {
         base: {
             color: 'text',
-            fontSize: 'fontSizes.2',
+            fontSize: 2,
         },
     },
 } as VariantArgs);
 
-export const Small: React.FC<SmallStyledProps> = styled.small`
+export const Small: React.FC<SmallProps> = styled.small`
     ${variants}
     ${color}
     ${typography}

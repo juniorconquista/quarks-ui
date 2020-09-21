@@ -1,12 +1,10 @@
 ---
 name: H2
-menu: Typography
+menu: Components
 ---
 
-import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
 import { H2 } from '../ds/typography';
-import * as theme from '../ds/theme';
 
 # H2
 
@@ -25,9 +23,7 @@ Each HTML heading has a default size. However, you can specify the size for any 
 ## Basic usage
 
 <Playground>
-    <ThemeProvider theme={{ ...theme.default }}>
-        <H2 styling="base">Base</H2>
-    </ThemeProvider>
+    <H2 styling="base">Base</H2>
 </Playground>
 
 ## Customization

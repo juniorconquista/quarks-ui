@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import { variant, VariantArgs, color, typography, space } from 'styled-system';
-import { LabelStyledProps } from './label.types';
+import { LabelProps } from './label.types';
 
 const variants = variant({
     prop: 'styling',
     variants: {
         base: {
             color: 'text',
-            fontSize: 'fontSizes.4',
+            fontSize: 4,
         },
     },
 } as VariantArgs);
 
-export const Label: React.FC<LabelStyledProps> = styled.label`
+export const Label: React.FC<LabelProps> = styled.label`
     ${variants}
     ${color}
     ${typography}

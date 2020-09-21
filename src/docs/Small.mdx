@@ -3,10 +3,8 @@ name: Small
 menu: Typography
 ---
 
-import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
 import { Small } from '../ds/typography';
-import * as theme from '../ds/theme';
 
 # Small
 
@@ -23,9 +21,7 @@ The _Small_ tag defines smaller text (like copyright and other side-comments).
 ## Basic usage
 
 <Playground>
-    <ThemeProvider theme={{ ...theme.default }}>
-        <Small styling="base">Base</Small>
-    </ThemeProvider>
+    <Small styling="base">Base</Small>
 </Playground>
 
 ## Customization
