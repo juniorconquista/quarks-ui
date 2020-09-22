@@ -1,32 +1,28 @@
 ---
-name: H1
+name: Label
 menu: Typography
 ---
 
 import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
-import { H1 } from '../ds/typography';
+import { Label } from '../ds/typography';
 import * as theme from '../ds/theme';
 
-# H1
+# Label
 
-Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
-
-Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+The _label_ element is the formal way of defining a label for an HTML form widget. This is the most important element if you want to create accessible forms - when implemented correctly, screen readers will speak the label of a form element along with related instructions.
 
 ### Best practices
 
--   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
-
 ## Properties
 
-<Props of={H1} />
+<Props of={Label} />
 
 ## Basic usage
 
 <Playground>
     <ThemeProvider theme={{ ...theme.default }}>
-        <H1 styling="base">Base</H1>
+        <Label styling="base">Base</Label>
     </ThemeProvider>
 </Playground>
 
@@ -40,19 +36,19 @@ You can see all the color customization [here](https://styled-system.com/api/#co
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<H1 styling="base" color='blue'>Title</H1>
+<Label styling="base" color='blue'>Title</Label>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<H1 color='gray.0'>Title</H1>
+<Label color='gray.0'>Title</Label>
 
 // raw CSS color value
-<H1 color='#f00'>Title</H1>
+<Label color='#f00'>Title</Label>
 
 // background colors
-<H1 bg='blue'>Title</H1>
+<Label bg='blue'>Title</Label>
 
 // verbose prop
-<H1 backgroundColor='blue'>Title</H1>
+<Label backgroundColor='blue'>Title</Label>
 ```
 
 ### Space
@@ -63,16 +59,16 @@ You can see all the space customization [here](https://styled-system.com/api#spa
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<H1 styling="base" m={2}>Title</H1>
+<Label styling="base" m={2}>Title</Label>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<H1 m={16}>Title</H1>
+<Label m={16}>Title</Label>
 
 // sets margin `'auto'`
-<H1 m='auto'>Title</H1>
+<Label m='auto'>Title</Label>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<H1 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H1>
+<Label m={{ mobile:2, tablet:3, desktop:4 }}>Title</Label>
 ```
 
 ### Typography
@@ -83,30 +79,30 @@ You can see all the typography customization [here](https://styled-system.com/ap
 
 ```javascript
 // font-size of `theme.fontSizes[3]`
-<H1 styling="base" fontSize={3}>Title</H1>
+<Label styling="base" fontSize={3}>Title</Label>
 
 // font-size `32px`
-<H1 fontSize={32}>Title</H1>
+<Label fontSize={32}>Title</Label>
 
 // font-size `'2em'`
-<H1 fontSize='2em'>Title</H1>
+<Label fontSize='2em'>Title</Label>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<H1 fontSize={{ mobile:10, desktop:12 }}>Title</H1>
+<Label fontSize={{ mobile:10, desktop:12 }}>Title</Label>
 
 // fontFamily
-<H1 fontFamily='mono'>Title</H1>
+<Label fontFamily='mono'>Title</Label>
 
 // textAlign
-<H1 textAlign='center'>Title</H1>
-<H1 textAlign={[ 'center', 'left' ]}>Title</H1>
+<Label textAlign='center'>Title</Label>
+<Label textAlign={[ 'center', 'left' ]}>Title</Label>
 
 // lineHeight
-<H1 lineHeight='1.25'>Title</H1>
+<Label lineHeight='1.25'>Title</Label>
 
 // fontWeight
-<H1 fontWeight='bold'>Title</H1>
+<Label fontWeight='bold'>Title</Label>
 
 // letterSpacing
-<H1 letterSpacing='0.1em'>Title</H1>
+<Label letterSpacing='0.1em'>Title</Label>
 ```
