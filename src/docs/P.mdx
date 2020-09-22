@@ -1,29 +1,32 @@
 ---
-name: H1
+name: P
 menu: Typography
 ---
 
 import { Playground, Props } from 'docz';
-import { H1 } from '../ds/typography';
+import { P } from '../ds/typography';
 
-# H1
+# P
 
-Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+The HTML _P_ element defines a paragraph.
 
-Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
 
 ### Best practices
 
--   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+-   You cannot be sure how HTML will be displayed.
+-   Large or small screens, and resized windows will create different results.
+-   With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.
+-   The browser will automatically remove any extra spaces and lines when the page is displayed
 
 ## Properties
 
-<Props of={H1} />
+<Props of={P} />
 
 ## Basic usage
 
 <Playground>
-    <H1 styling="base">Base</H1>
+    <P styling="base">Base</P>
 </Playground>
 
 ## Customization
@@ -36,19 +39,19 @@ You can see all the color customization [here](https://styled-system.com/api/#co
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<H1 styling="base" color='blue'>Title</H1>
+<P styling="base" color='blue'>Title</P>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<H1 color='gray.0'>Title</H1>
+<P color='gray.0'>Title</P>
 
 // raw CSS color value
-<H1 color='#f00'>Title</H1>
+<P color='#f00'>Title</P>
 
 // background colors
-<H1 bg='blue'>Title</H1>
+<P bg='blue'>Title</P>
 
 // verbose prop
-<H1 backgroundColor='blue'>Title</H1>
+<P backgroundColor='blue'>Title</P>
 ```
 
 ### Space
@@ -59,16 +62,16 @@ You can see all the space customization [here](https://styled-system.com/api#spa
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<H1 styling="base" m={2}>Title</H1>
+<P styling="base" m={2}>Title</P>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<H1 m={16}>Title</H1>
+<P m={16}>Title</P>
 
 // sets margin `'auto'`
-<H1 m='auto'>Title</H1>
+<P m='auto'>Title</P>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<H1 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H1>
+<P m={{ mobile:2, tablet:3, desktop:4 }}>Title</P>
 ```
 
 ### Typography
@@ -79,30 +82,30 @@ You can see all the typography customization [here](https://styled-system.com/ap
 
 ```javascript
 // font-size of `theme.fontSizes[3]`
-<H1 styling="base" fontSize={3}>Title</H1>
+<P styling="base" fontSize={3}>Title</P>
 
 // font-size `32px`
-<H1 fontSize={32}>Title</H1>
+<P fontSize={32}>Title</P>
 
 // font-size `'2em'`
-<H1 fontSize='2em'>Title</H1>
+<P fontSize='2em'>Title</P>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<H1 fontSize={{ mobile:10, desktop:12 }}>Title</H1>
+<P fontSize={{ mobile:10, desktop:12 }}>Title</P>
 
 // fontFamily
-<H1 fontFamily='mono'>Title</H1>
+<P fontFamily='mono'>Title</P>
 
 // textAlign
-<H1 textAlign='center'>Title</H1>
-<H1 textAlign={[ 'center', 'left' ]}>Title</H1>
+<P textAlign='center'>Title</P>
+<P textAlign={[ 'center', 'left' ]}>Title</P>
 
 // lineHeight
-<H1 lineHeight='1.25'>Title</H1>
+<P lineHeight='1.25'>Title</P>
 
 // fontWeight
-<H1 fontWeight='bold'>Title</H1>
+<P fontWeight='bold'>Title</P>
 
 // letterSpacing
-<H1 letterSpacing='0.1em'>Title</H1>
+<P letterSpacing='0.1em'>Title</P>
 ```

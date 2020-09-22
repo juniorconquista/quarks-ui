@@ -1,12 +1,12 @@
 ---
-name: H1
+name: H5
 menu: Typography
 ---
 
 import { Playground, Props } from 'docz';
-import { H1 } from '../ds/typography';
+import { H5 } from '../ds/typography';
 
-# H1
+# H5
 
 Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
 
@@ -18,12 +18,12 @@ Each HTML heading has a default size. However, you can specify the size for any 
 
 ## Properties
 
-<Props of={H1} />
+<Props of={H5} />
 
 ## Basic usage
 
 <Playground>
-    <H1 styling="base">Base</H1>
+    <H5 styling="base">Base</H5>
 </Playground>
 
 ## Customization
@@ -36,19 +36,19 @@ You can see all the color customization [here](https://styled-system.com/api/#co
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<H1 styling="base" color='blue'>Title</H1>
+<H5 styling="base" color='blue'>Title</H5>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<H1 color='gray.0'>Title</H1>
+<H5 color='gray.0'>Title</H5>
 
 // raw CSS color value
-<H1 color='#f00'>Title</H1>
+<H5 color='#f00'>Title</H5>
 
 // background colors
-<H1 bg='blue'>Title</H1>
+<H5 bg='blue'>Title</H5>
 
 // verbose prop
-<H1 backgroundColor='blue'>Title</H1>
+<H5 backgroundColor='blue'>Title</H5>
 ```
 
 ### Space
@@ -59,16 +59,16 @@ You can see all the space customization [here](https://styled-system.com/api#spa
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<H1 styling="base" m={2}>Title</H1>
+<H5 styling="base" m={2}>Title</H5>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<H1 m={16}>Title</H1>
+<H5 m={16}>Title</H5>
 
 // sets margin `'auto'`
-<H1 m='auto'>Title</H1>
+<H5 m='auto'>Title</H5>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<H1 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H1>
+<H5 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H5>
 ```
 
 ### Typography
@@ -79,30 +79,30 @@ You can see all the typography customization [here](https://styled-system.com/ap
 
 ```javascript
 // font-size of `theme.fontSizes[3]`
-<H1 styling="base" fontSize={3}>Title</H1>
+<H5 styling="base" fontSize={3}>Title</H5>
 
 // font-size `32px`
-<H1 fontSize={32}>Title</H1>
+<H5 fontSize={32}>Title</H5>
 
 // font-size `'2em'`
-<H1 fontSize='2em'>Title</H1>
+<H5 fontSize='2em'>Title</H5>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<H1 fontSize={{ mobile:10, desktop:12 }}>Title</H1>
+<H5 fontSize={{ mobile:10, desktop:12 }}>Title</H5>
 
 // fontFamily
-<H1 fontFamily='mono'>Title</H1>
+<H5 fontFamily='mono'>Title</H5>
 
 // textAlign
-<H1 textAlign='center'>Title</H1>
-<H1 textAlign={[ 'center', 'left' ]}>Title</H1>
+<H5 textAlign='center'>Title</H5>
+<H5 textAlign={[ 'center', 'left' ]}>Title</H5>
 
 // lineHeight
-<H1 lineHeight='1.25'>Title</H1>
+<H5 lineHeight='1.25'>Title</H5>
 
 // fontWeight
-<H1 fontWeight='bold'>Title</H1>
+<H5 fontWeight='bold'>Title</H5>
 
 // letterSpacing
-<H1 letterSpacing='0.1em'>Title</H1>
+<H5 letterSpacing='0.1em'>Title</H5>
 ```
