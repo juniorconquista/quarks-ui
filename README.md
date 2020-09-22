@@ -38,4 +38,4 @@ Several quick start options are available:
 
 Code and documentation copyright 2020 the [quarks-ui](https://github.com/juniorconquista/quarks-ui).
 
-<a href="/styled-system/styled-system/blob/master/LICENSE.md">MIT License</a>
+<a href="https://github.com/juniorconquista/quarks-ui/blob/master/LICENSE">MIT License</a>
