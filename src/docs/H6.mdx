@@ -3,10 +3,8 @@ name: H6
 menu: Typography
 ---
 
-import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
 import { H6 } from '../ds/typography';
-import * as theme from '../ds/theme';
 
 # H6
 
@@ -25,9 +23,7 @@ Each HTML heading has a default size. However, you can specify the size for any 
 ## Basic usage
 
 <Playground>
-    <ThemeProvider theme={{ ...theme.default }}>
-        <H6 styling="base">Base</H6>
-    </ThemeProvider>
+    <H6 styling="base">Base</H6>
 </Playground>
 
 ## Customization
