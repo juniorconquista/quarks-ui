@@ -20,17 +20,17 @@
 Several quick start options are available:
 
 -   Clone the repo:
-```jsx
+```
   git clone https://github.com/juniorconquista/quarks-ui.git
 ```
 
 -   Install with [npm](https://www.npmjs.com/): 
-```jsx
+```
   npm install quarks-ui
 ```
 
 -   Install with [yarn](https://yarnpkg.com/): 
-```jsx
+```
   yarn add quarks-ui
 ```
 
