@@ -3,10 +3,8 @@ name: Label
 menu: Typography
 ---
 
-import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
 import { Label } from '../ds/typography';
-import * as theme from '../ds/theme';
 
 # Label
 
@@ -21,9 +19,7 @@ The _label_ element is the formal way of defining a label for an HTML form widge
 ## Basic usage
 
 <Playground>
-    <ThemeProvider theme={{ ...theme.default }}>
-        <Label styling="base">label</Label>
-    </ThemeProvider>
+    <Label styling="base">Base</Label>
 </Playground>
 
 ## Customization

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { variant, VariantArgs, color, typography, space } from 'styled-system';
-import { H3StyledProps } from './h3.types';
+import { H3Props } from './h3.types';
 
 const variants = variant({
     prop: 'styling',
     variants: {
         base: {
             color: 'text',
-            fontSize: 'fontSizes.5',
+            fontSize: 5,
         },
         get light() {
             return {
@@ -18,7 +18,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const H3: React.FC<H3StyledProps> = styled.h3`
+export const H3: React.FC<H3Props> = styled.h3`
     ${variants}
     ${color}
     ${typography}

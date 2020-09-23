@@ -3,10 +3,8 @@ name: H1
 menu: Typography
 ---
 
-import { ThemeProvider } from 'styled-components';
 import { Playground, Props } from 'docz';
 import { H1 } from '../ds/typography';
-import * as theme from '../ds/theme';
 
 # H1
 
@@ -25,9 +23,7 @@ Each HTML heading has a default size. However, you can specify the size for any 
 ## Basic usage
 
 <Playground>
-    <ThemeProvider theme={{ ...theme.default }}>
-        <H1 styling="base">Base</H1>
-    </ThemeProvider>
+    <H1 styling="base">Base</H1>
 </Playground>
 
 ## Customization
