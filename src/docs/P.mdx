@@ -26,7 +26,9 @@ A paragraph always starts on a new line, and browsers automatically add some whi
 ## Basic usage
 
 <Playground>
-    <P styling="base">Base</P>
+    <P styling="base">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </P>
 </Playground>
 
 ## Customization
@@ -39,19 +41,19 @@ You can see all the color customization [here](https://styled-system.com/api/#co
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<P styling="base" color='blue'>Title</P>
+<P styling="base" color='blue'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<P color='gray.0'>Title</P>
+<P color='gray.0'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // raw CSS color value
-<P color='#f00'>Title</P>
+<P color='#f00'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // background colors
-<P bg='blue'>Title</P>
+<P bg='blue'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // verbose prop
-<P backgroundColor='blue'>Title</P>
+<P backgroundColor='blue'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 ```
 
 ### Space
@@ -62,16 +64,16 @@ You can see all the space customization [here](https://styled-system.com/api#spa
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<P styling="base" m={2}>Title</P>
+<P styling="base" m={2}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<P m={16}>Title</P>
+<P m={16}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // sets margin `'auto'`
-<P m='auto'>Title</P>
+<P m='auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<P m={{ mobile:2, tablet:3, desktop:4 }}>Title</P>
+<P m={{ mobile:2, tablet:3, desktop:4 }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 ```
 
 ### Typography
@@ -82,30 +84,30 @@ You can see all the typography customization [here](https://styled-system.com/ap
 
 ```javascript
 // font-size of `theme.fontSizes[3]`
-<P styling="base" fontSize={3}>Title</P>
+<P styling="base" fontSize={3}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // font-size `32px`
-<P fontSize={32}>Title</P>
+<P fontSize={32}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // font-size `'2em'`
-<P fontSize='2em'>Title</P>
+<P fontSize='2em'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<P fontSize={{ mobile:10, desktop:12 }}>Title</P>
+<P fontSize={{ mobile:10, desktop:12 }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // fontFamily
-<P fontFamily='mono'>Title</P>
+<P fontFamily='mono'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // textAlign
-<P textAlign='center'>Title</P>
-<P textAlign={[ 'center', 'left' ]}>Title</P>
+<P textAlign='center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
+<P textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // lineHeight
-<P lineHeight='1.25'>Title</P>
+<P lineHeight='1.25'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // fontWeight
-<P fontWeight='bold'>Title</P>
+<P fontWeight='bold'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // letterSpacing
-<P letterSpacing='0.1em'>Title</P>
+<P letterSpacing='0.1em'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 ```
