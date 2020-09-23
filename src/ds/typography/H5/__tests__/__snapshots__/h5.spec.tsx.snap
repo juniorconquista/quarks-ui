@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H5 basic snapshot 1`] = `
+.c0 {
+  color: #1B2b3a;
+  font-size: 0.83rem;
+}
+
+<h5
+  className="c0"
+/>
+`;
