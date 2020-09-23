@@ -24,7 +24,7 @@ The _Small_ tag defines smaller text (like copyright and other side-comments).
 
 <Playground>
     <ThemeProvider theme={{ ...theme.default }}>
-        <Small styling="base">Base</Small>
+        <Small styling="base">small text</Small>
     </ThemeProvider>
 </Playground>
 
@@ -38,19 +38,19 @@ You can see all the color customization [here](https://styled-system.com/api/#co
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<Small styling="base" color='blue'>Title</Small>
+<Small styling="base" color='blue'>small text</Small>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<Small color='gray.0'>Title</Small>
+<Small color='gray.0'>small text</Small>
 
 // raw CSS color value
-<Small color='#f00'>Title</Small>
+<Small color='#f00'>small text</Small>
 
 // background colors
-<Small bg='blue'>Title</Small>
+<Small bg='blue'>small text</Small>
 
 // verbose prop
-<Small backgroundColor='blue'>Title</Small>
+<Small backgroundColor='blue'>small text</Small>
 ```
 
 ### Space
@@ -61,16 +61,16 @@ You can see all the space customization [here](https://styled-system.com/api#spa
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<Small styling="base" m={2}>Title</Small>
+<Small styling="base" m={2}>small text</Small>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<Small m={16}>Title</Small>
+<Small m={16}>small text</Small>
 
 // sets margin `'auto'`
-<Small m='auto'>Title</Small>
+<Small m='auto'>small text</Small>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<Small m={{ mobile:2, tablet:3, desktop:4 }}>Title</Small>
+<Small m={{ mobile:2, tablet:3, desktop:4 }}>small text</Small>
 ```
 
 ### Typography
@@ -81,30 +81,30 @@ You can see all the typography customization [here](https://styled-system.com/ap
 
 ```javascript
 // font-size of `theme.fontSizes[3]`
-<Small styling="base" fontSize={3}>Title</Small>
+<Small styling="base" fontSize={3}>small text</Small>
 
 // font-size `32px`
-<Small fontSize={32}>Title</Small>
+<Small fontSize={32}>small text</Small>
 
 // font-size `'2em'`
-<Small fontSize='2em'>Title</Small>
+<Small fontSize='2em'>small text</Small>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<Small fontSize={{ mobile:10, desktop:12 }}>Title</Small>
+<Small fontSize={{ mobile:10, desktop:12 }}>small text</Small>
 
 // fontFamily
-<Small fontFamily='mono'>Title</Small>
+<Small fontFamily='mono'>small text</Small>
 
 // textAlign
-<Small textAlign='center'>Title</Small>
-<Small textAlign={[ 'center', 'left' ]}>Title</Small>
+<Small textAlign='center'>small text</Small>
+<Small textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>small text</Small>
 
 // lineHeight
-<Small lineHeight='1.25'>Title</Small>
+<Small lineHeight='1.25'>small text</Small>
 
 // fontWeight
-<Small fontWeight='bold'>Title</Small>
+<Small fontWeight='bold'>small text</Small>
 
 // letterSpacing
-<Small letterSpacing='0.1em'>Title</Small>
+<Small letterSpacing='0.1em'>small text</Small>
 ```
