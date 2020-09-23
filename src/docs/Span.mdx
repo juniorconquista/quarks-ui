@@ -22,7 +22,7 @@ The _Span_ tag is an inline container used to mark up a part of a text, or a par
 ## Basic usage
 
 <Playground>
-    <Span styling="base">Base</Span>
+    <Span styling="base">span</Span>
 </Playground>
 
 ## Customization
@@ -35,19 +35,19 @@ You can see all the color customization [here](https://styled-system.com/api/#co
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<Span styling="base" color='blue'>Title</Span>
+<Span styling="base" color='blue'>span</Span>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<Span color='gray.0'>Title</Span>
+<Span color='gray.0'>span</Span>
 
 // raw CSS color value
-<Span color='#f00'>Title</Span>
+<Span color='#f00'>span</Span>
 
 // background colors
-<Span bg='blue'>Title</Span>
+<Span bg='blue'>span</Span>
 
 // verbose prop
-<Span backgroundColor='blue'>Title</Span>
+<Span backgroundColor='blue'>span</Span>
 ```
 
 ### Space
@@ -58,16 +58,16 @@ You can see all the space customization [here](https://styled-system.com/api#spa
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<Span styling="base" m={2}>Title</Span>
+<Span styling="base" m={2}>span</Span>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<Span m={16}>Title</Span>
+<Span m={16}>span</Span>
 
 // sets margin `'auto'`
-<Span m='auto'>Title</Span>
+<Span m='auto'>span</Span>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<Span m={{ mobile:2, tablet:3, desktop:4 }}>Title</Span>
+<Span m={{ mobile:2, tablet:3, desktop:4 }}>span</Span>
 ```
 
 ### Typography
@@ -78,30 +78,30 @@ You can see all the typography customization [here](https://styled-system.com/ap
 
 ```javascript
 // font-size of `theme.fontSizes[3]`
-<Span styling="base" fontSize={3}>Title</Span>
+<Span styling="base" fontSize={3}>span</Span>
 
 // font-size `32px`
-<Span fontSize={32}>Title</Span>
+<Span fontSize={32}>span</Span>
 
 // font-size `'2em'`
-<Span fontSize='2em'>Title</Span>
+<Span fontSize='2em'>span</Span>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<Span fontSize={{ mobile:10, desktop:12 }}>Title</Span>
+<Span fontSize={{ mobile:10, desktop:12 }}>span</Span>
 
 // fontFamily
-<Span fontFamily='mono'>Title</Span>
+<Span fontFamily='mono'>span</Span>
 
 // textAlign
-<Span textAlign='center'>Title</Span>
-<Span textAlign={[ 'center', 'left' ]}>Title</Span>
+<Span textAlign='center'>span</Span>
+<Span textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>span</Span>
 
 // lineHeight
-<Span lineHeight='1.25'>Title</Span>
+<Span lineHeight='1.25'>span</Span>
 
 // fontWeight
-<Span fontWeight='bold'>Title</Span>
+<Span fontWeight='bold'>span</Span>
 
 // letterSpacing
-<Span letterSpacing='0.1em'>Title</Span>
+<Span letterSpacing='0.1em'>span</Span>
 ```
