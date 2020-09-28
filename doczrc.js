@@ -1,5 +1,5 @@
 export default {
-    files: ['**/*.{md,markdown,mdx}'],
+    files: ['src/**/*.{md,markdown,mdx}'],
     menu: ['Typography'],
     typescript: true,
 };
