@@ -1,4 +1,4 @@
-import theme from '../src/ds/theme';
-import * as typography from '../src/ds/typography';
-import * as hooks from '../src/ds/hooks/useTheme';
+import theme from './ds/theme';
+import * as typography from './ds/typography';
+import * as hooks from './ds/hooks/useTheme';
 export { theme, hooks, typography };
