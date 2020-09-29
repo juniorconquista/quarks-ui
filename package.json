@@ -2,11 +2,14 @@
     "name": "quarks-ui",
     "version": "0.0.3",
     "description": "",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
     "scripts": {
+        "build": "tsc",
+        "build:watch": "tsc --watch",
         "docz": "docz dev",
         "format": "prettier --write \"**/*.{json,md,ts,tsx}\" ",
         "test": "jest --watch",
+        "prepublish": "npm run build",
         "test:coverage": "yarn test --coverage --watchAll=false"
     },
     "repository": {
