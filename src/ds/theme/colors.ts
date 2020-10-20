@@ -1,58 +1,61 @@
-export default {
-    dark: false,
-    primary: {
-        default: '#F26522',
-        dark: '#d14b0c',
-        light: '#f69263',
-        contrast: '#ffffff',
-    },
-    secondary: {
-        default: '#372E2A',
-        dark: '#2c2522',
-        light: '#453935',
-        contrast: '#1B2B3A',
-    },
-    danger: {
-        default: '#ff6961',
-        dark: '#ff261b',
-        light: '#ffbdb9',
-        contrast: '#ffffff',
-    },
-    success: {
-        default: '#0E9d51',
-        dark: '#0a753c',
-        light: '#10bc60',
-        contrast: '#ffffff',
-    },
-    warning: {
-        default: '#ffb143',
-        dark: '#e4902c',
-        light: '#ffd868',
-        contrast: '#ffffff',
-    },
-    info: {
-        default: '#0ea7a7',
-        dark: '#0a7676',
-        light: '#11d4d4',
-        contrast: '#ffffff',
-    },
-    grays: {
-        default: '#9ba8b2',
-        dark: '#4b4b4b',
-        light: '#eeeeef',
-        contrast: '#f5f5f5',
-    },
-    background: {
-        default: '#ffffff',
-        dark: '#F26522',
-    },
-    disabled: '#9398a6',
-    primaries: ['#d7edf4'],
-    whites: ['#eeeeef', '#f2fbfe'],
-    blacks: ['#35363a'],
-    hovers: ['#f5f7f7'],
-
-    get text(): string {
-        return this.dark ? '#FFFFFF' : '#1B2b3a';
-    },
-};
+export default function (dark = false) {
+    return {
+        dark,
+        get primary() {
+            return {
+                default: this.dark ? '#375a7f' : '#007bff',
+                dark: '#375a7f',
+                light: '#007bff',
+            };
+        },
+        get secondary() {
+            return {
+                default: this.dark ? '#444444' : '#6c757d',
+                dark: '#444444',
+                light: '#6c757d',
+            };
+        },
+        get success() {
+            return {
+                default: this.dark ? '#00bc8c' : '#28a745',
+                dark: '#00bc8c',
+                light: '#28a745',
+            };
+        },
+        get danger() {
+            return {
+                default: this.dark ? '#e74c3c' : '#dc3545',
+                dark: '#e74c3c',
+                light: '#dc3545',
+            };
+        },
+        get warning() {
+            return {
+                default: this.dark ? '#f39c12' : '#ffc107',
+                dark: '#f39c12',
+                light: '#ffc107',
+            };
+        },
+        get info() {
+            return {
+                default: this.dark ? '#3498db' : '#17a2b8',
+                dark: '#3498db',
+                light: '#17a2b8',
+            };
+        },
+        get background() {
+            return {
+                default: this.dark ? '#343a40' : '#f8f9fa',
+                dark: '#343a40',
+                ligth: '#f8f9fa',
+            };
+        },
+        get text() {
+            return {
+                default: this.dark ? '#f8f9fa' : '#343a40',
+                dark: '#f8f9fa',
+                light: '#343a40',
+            };
+        },
+    };
+}
