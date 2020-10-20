@@ -1,4 +1,5 @@
-const linguagens = require('./linguagens-de-programacao.json');
-module.exports = {
-    all: linguagens,
-};
+import theme from './ds/theme';
+import * as typography from './ds/typography';
+import * as hooks from './ds/hooks/useTheme';
+
+export { theme, hooks, typography };
