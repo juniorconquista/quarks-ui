@@ -11,6 +11,7 @@
         "docz:serve": "docz build && docz serve",
         "format": "prettier --write \"**/*.{json,md,ts,tsx}\" ",
         "test": "jest --watch",
+        "publish": "npm run prepublish && npm publish",
         "prepublish": "npm run build",
         "test:coverage": "yarn test --coverage --watchAll=false"
     },

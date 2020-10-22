@@ -6,7 +6,7 @@ const theme = {
     space,
     breakpoints,
     radii,
-    colors,
+    colors: colors(false),
 };
 
 theme.breakpoints.mobile = breakpoints[0];

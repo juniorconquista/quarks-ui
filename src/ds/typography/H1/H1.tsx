@@ -7,7 +7,7 @@ const variants = variant({
     prop: 'styling',
     variants: {
         base: {
-            color: 'text',
+            color: 'text.default',
             fontSize: 8,
         },
         get light() {

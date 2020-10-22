@@ -19,7 +19,7 @@ The _label_ element is the formal way of defining a label for an HTML form widge
 ## Basic usage
 
 <Playground>
-    <Label styling="base">Base</Label>
+    <Label styling="base">label</Label>
 </Playground>
 
 ## Customization
@@ -29,6 +29,12 @@ The _label_ element is the formal way of defining a label for an HTML form widge
 The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
 
 You can see all the color customization [here](https://styled-system.com/api/#color).
+
+<Playground>
+    <Label styling="base" color="blue">
+        label
+    </Label>
+</Playground>
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
@@ -53,6 +59,12 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 
 You can see all the space customization [here](https://styled-system.com/api#space).
 
+<Playground>
+    <Label styling="base" m={2}>
+        label
+    </Label>
+</Playground>
+
 ```javascript
 // sets margin value of `theme.space[2]`
 <Label styling="base" m={2}>label</Label>
@@ -73,9 +85,15 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
+<Playground>
+    <Label styling="base" fontSize={4}>
+        label
+    </Label>
+</Playground>
+
 ```javascript
-// font-size of `theme.fontSizes[3]`
-<Label styling="base" fontSize={3}>label</Label>
+// font-size of `theme.fontSizes[4]`
+<Label styling="base" fontSize={4}>label</Label>
 
 // font-size `32px`
 <Label fontSize={32}>label</Label>
