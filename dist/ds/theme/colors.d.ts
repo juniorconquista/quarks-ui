@@ -1,56 +1,45 @@
-declare const _default: {
+export default function (
+    dark?: boolean,
+): {
     dark: boolean;
-    primary: {
+    readonly primary: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    secondary: {
+    readonly secondary: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    danger: {
+    readonly success: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    success: {
+    readonly danger: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    warning: {
+    readonly warning: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    info: {
+    readonly info: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    grays: {
+    readonly background: {
+        default: string;
+        dark: string;
+        ligth: string;
+    };
+    readonly text: {
         default: string;
         dark: string;
         light: string;
-        contrast: string;
     };
-    background: {
-        default: string;
-        dark: string;
-    };
-    disabled: string;
-    primaries: string[];
-    whites: string[];
-    blacks: string[];
-    hovers: string[];
-    readonly text: string;
 };
-export default _default;

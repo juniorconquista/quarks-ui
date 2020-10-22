@@ -6,7 +6,9 @@
     "scripts": {
         "build": "tsc",
         "build:watch": "tsc --watch",
-        "docz": "docz dev",
+        "docz:dev": "docz dev",
+        "docz:build": "docz build",
+        "docz:serve": "docz build && docz serve",
         "format": "prettier --write \"**/*.{json,md,ts,tsx}\" ",
         "test": "jest --watch",
         "prepublish": "npm run build",
