@@ -39,6 +39,12 @@ The color utility parses a component's _color_ and _bg_ props and converts them 
 
 You can see all the color customization [here](https://styled-system.com/api/#color).
 
+<Playground>
+    <P styling="base" color="blue">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </P>
+</Playground>
+
 ```javascript
 // picks the value defined in `theme.colors.blue`
 <P styling="base" color='blue'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
@@ -62,6 +68,12 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 
 You can see all the space customization [here](https://styled-system.com/api#space).
 
+<Playground>
+    <P styling="base" m={2}>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </P>
+</Playground>
+
 ```javascript
 // sets margin value of `theme.space[2]`
 <P styling="base" m={2}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
@@ -82,9 +94,15 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
+<Playground>
+    <P styling="base" fontSize={4}>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </P>
+</Playground>
+
 ```javascript
-// font-size of `theme.fontSizes[3]`
-<P styling="base" fontSize={3}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
+// font-size of `theme.fontSizes[4]`
+<P styling="base" fontSize={4}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>
 
 // font-size `32px`
 <P fontSize={32}>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</P>

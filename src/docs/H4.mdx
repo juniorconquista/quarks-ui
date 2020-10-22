@@ -23,7 +23,7 @@ Each HTML heading has a default size. However, you can specify the size for any 
 ## Basic usage
 
 <Playground>
-    <H4 styling="base">Base</H4>
+    <H4 styling="base">Title</H4>
 </Playground>
 
 ## Customization
@@ -33,6 +33,12 @@ Each HTML heading has a default size. However, you can specify the size for any 
 The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
 
 You can see all the color customization [here](https://styled-system.com/api/#color).
+
+<Playground>
+    <H4 styling="base" color="blue">
+        Title
+    </H4>
+</Playground>
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
@@ -57,6 +63,12 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 
 You can see all the space customization [here](https://styled-system.com/api#space).
 
+<Playground>
+    <H4 styling="base" m={2}>
+        Title
+    </H4>
+</Playground>
+
 ```javascript
 // sets margin value of `theme.space[2]`
 <H4 styling="base" m={2}>Title</H4>
@@ -77,9 +89,15 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
+<Playground>
+    <H4 styling="base" fontSize={4}>
+        Title
+    </H4>
+</Playground>
+
 ```javascript
-// font-size of `theme.fontSizes[3]`
-<H4 styling="base" fontSize={3}>Title</H4>
+// font-size of `theme.fontSizes[4]`
+<H4 styling="base" fontSize={4}>Title</H4>
 
 // font-size `32px`
 <H4 fontSize={32}>Title</H4>
