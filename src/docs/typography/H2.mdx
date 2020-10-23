@@ -1,12 +1,12 @@
 ---
-name: H5
+name: H2
 menu: Typography
 ---
 
 import { Playground, Props } from 'docz';
-import { H5 } from '../ds/typography';
+import { H2 } from '../../ds/typography';
 
-# H5
+# H2
 
 Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
 
@@ -18,12 +18,12 @@ Each HTML heading has a default size. However, you can specify the size for any 
 
 ## Properties
 
-<Props of={H5} />
+<Props of={H2} />
 
 ## Basic usage
 
 <Playground>
-    <H5 styling="base">Title</H5>
+    <H2 styling="base">Title</H2>
 </Playground>
 
 ## Customization
@@ -35,26 +35,26 @@ The color utility parses a component's _color_ and _bg_ props and converts them 
 You can see all the color customization [here](https://styled-system.com/api/#color).
 
 <Playground>
-    <H5 styling="base" color="blue">
+    <H2 styling="base" color="blue">
         Title
-    </H5>
+    </H2>
 </Playground>
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<H5 styling="base" color='blue'>Title</H5>
+<H2 styling="base" color='blue'>Title</H2>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<H5 color='gray.0'>Title</H5>
+<H2 color='gray.0'>Title</H2>
 
 // raw CSS color value
-<H5 color='#f00'>Title</H5>
+<H2 color='#f00'>Title</H2>
 
 // background colors
-<H5 bg='blue'>Title</H5>
+<H2 bg='blue'>Title</H2>
 
 // verbose prop
-<H5 backgroundColor='blue'>Title</H5>
+<H2 backgroundColor='blue'>Title</H2>
 ```
 
 ### Space
@@ -64,23 +64,23 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 You can see all the space customization [here](https://styled-system.com/api#space).
 
 <Playground>
-    <H5 styling="base" m={2}>
+    <H2 styling="base" m={2}>
         Title
-    </H5>
+    </H2>
 </Playground>
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<H5 styling="base" m={2}>Title</H5>
+<H2 styling="base" m={2}>Title</H2>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<H5 m={16}>Title</H5>
+<H2 m={16}>Title</H2>
 
 // sets margin `'auto'`
-<H5 m='auto'>Title</H5>
+<H2 m='auto'>Title</H2>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<H5 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H5>
+<H2 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H2>
 ```
 
 ### Typography
@@ -90,37 +90,37 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
 <Playground>
-    <H5 styling="base" fontSize={2}>
+    <H2 styling="base" fontSize={6}>
         Title
-    </H5>
+    </H2>
 </Playground>
 
 ```javascript
-// font-size of `theme.fontSizes[2]`
-<H5 styling="base" fontSize={2}>Title</H5>
+// font-size of `theme.fontSizes[6]`
+<H2 styling="base" fontSize={6}>Title</H2>
 
 // font-size `32px`
-<H5 fontSize={32}>Title</H5>
+<H2 fontSize={32}>Title</H2>
 
 // font-size `'2em'`
-<H5 fontSize='2em'>Title</H5>
+<H2 fontSize='2em'>Title</H2>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<H5 fontSize={{ mobile:10, desktop:12 }}>Title</H5>
+<H2 fontSize={{ mobile:10, desktop:12 }}>Title</H2>
 
 // fontFamily
-<H5 fontFamily='mono'>Title</H5>
+<H2 fontFamily='mono'>Title</H2>
 
 // textAlign
-<H5 textAlign='center'>Title</H5>
-<H5 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H5>
+<H2 textAlign='center'>Title</H2>
+<H2 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H2>
 
 // lineHeight
-<H5 lineHeight='1.25'>Title</H5>
+<H2 lineHeight='1.25'>Title</H2>
 
 // fontWeight
-<H5 fontWeight='bold'>Title</H5>
+<H2 fontWeight='bold'>Title</H2>
 
 // letterSpacing
-<H5 letterSpacing='0.1em'>Title</H5>
+<H2 letterSpacing='0.1em'>Title</H2>
 ```

@@ -1,25 +1,29 @@
 ---
-name: Label
+name: H1
 menu: Typography
 ---
 
 import { Playground, Props } from 'docz';
-import { Label } from '../ds/typography';
+import { H1 } from '../../ds/typography';
 
-# Label
+# H1
 
-The _label_ element is the formal way of defining a label for an HTML form widget. This is the most important element if you want to create accessible forms - when implemented correctly, screen readers will speak the label of a form element along with related instructions.
+Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
 
 ### Best practices
 
+-   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
 ## Properties
 
-<Props of={Label} />
+<Props of={H1} />
 
 ## Basic usage
 
 <Playground>
-    <Label styling="base">label</Label>
+    <H1 styling="base">Title</H1>
 </Playground>
 
 ## Customization
@@ -31,26 +35,26 @@ The color utility parses a component's _color_ and _bg_ props and converts them 
 You can see all the color customization [here](https://styled-system.com/api/#color).
 
 <Playground>
-    <Label styling="base" color="blue">
-        label
-    </Label>
+    <H1 styling="base" color="blue">
+        Title
+    </H1>
 </Playground>
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<Label styling="base" color='blue'>label</Label>
+<H1 styling="base" color='blue'>Title</H1>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<Label color='gray.0'>label</Label>
+<H1 color='gray.0'>Title</H1>
 
 // raw CSS color value
-<Label color='#f00'>label</Label>
+<H1 color='#f00'>Title</H1>
 
 // background colors
-<Label bg='blue'>label</Label>
+<H1 bg='blue'>Title</H1>
 
 // verbose prop
-<Label backgroundColor='blue'>label</Label>
+<H1 backgroundColor='blue'>Title</H1>
 ```
 
 ### Space
@@ -60,23 +64,23 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 You can see all the space customization [here](https://styled-system.com/api#space).
 
 <Playground>
-    <Label styling="base" m={2}>
-        label
-    </Label>
+    <H1 styling="base" m={2}>
+        Title
+    </H1>
 </Playground>
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<Label styling="base" m={2}>label</Label>
+<H1 styling="base" m={2}>Title</H1>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<Label m={16}>label</Label>
+<H1 m={16}>Title</H1>
 
 // sets margin `'auto'`
-<Label m='auto'>label</Label>
+<H1 m='auto'>Title</H1>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<Label m={{ mobile:2, tablet:3, desktop:4 }}>label</Label>
+<H1 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H1>
 ```
 
 ### Typography
@@ -86,37 +90,37 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
 <Playground>
-    <Label styling="base" fontSize={4}>
-        label
-    </Label>
+    <H1 styling="base" fontSize={8}>
+        Title
+    </H1>
 </Playground>
 
 ```javascript
-// font-size of `theme.fontSizes[4]`
-<Label styling="base" fontSize={4}>label</Label>
+// font-size of `theme.fontSizes[8]`
+<H1 styling="base" fontSize={8}>Title</H1>
 
 // font-size `32px`
-<Label fontSize={32}>label</Label>
+<H1 fontSize={32}>Title</H1>
 
 // font-size `'2em'`
-<Label fontSize='2em'>label</Label>
+<H1 fontSize='2em'>Title</H1>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<Label fontSize={{ mobile:10, desktop:12 }}>label</Label>
+<H1 fontSize={{ mobile:10, desktop:12 }}>Title</H1>
 
 // fontFamily
-<Label fontFamily='mono'>label</Label>
+<H1 fontFamily='mono'>Title</H1>
 
 // textAlign
-<Label textAlign='center'>label</Label>
-<Label textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>label</Label>
+<H1 textAlign='center'>Title</H1>
+<H1 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H1>
 
 // lineHeight
-<Label lineHeight='1.25'>label</Label>
+<H1 lineHeight='1.25'>Title</H1>
 
 // fontWeight
-<Label fontWeight='bold'>label</Label>
+<H1 fontWeight='bold'>Title</H1>
 
 // letterSpacing
-<Label letterSpacing='0.1em'>label</Label>
+<H1 letterSpacing='0.1em'>Title</H1>
 ```

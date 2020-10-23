@@ -1,27 +1,29 @@
 ---
-name: Small
+name: H4
 menu: Typography
 ---
 
 import { Playground, Props } from 'docz';
-import { Small } from '../ds/typography';
+import { H4 } from '../../ds/typography';
 
-# Small
+# H4
 
-The _Small_ tag defines smaller text (like copyright and other side-comments).
+Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
 
 ### Best practices
 
--   This tag is not deprecated, but it is possible to achieve richer (or the same) effect with CSS.
+-   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
 
 ## Properties
 
-<Props of={Small} />
+<Props of={H4} />
 
 ## Basic usage
 
 <Playground>
-    <Small styling="base">small text</Small>
+    <H4 styling="base">Title</H4>
 </Playground>
 
 ## Customization
@@ -33,26 +35,26 @@ The color utility parses a component's _color_ and _bg_ props and converts them 
 You can see all the color customization [here](https://styled-system.com/api/#color).
 
 <Playground>
-    <Small styling="base" color="blue">
-        small text
-    </Small>
+    <H4 styling="base" color="blue">
+        Title
+    </H4>
 </Playground>
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<Small styling="base" color='blue'>small text</Small>
+<H4 styling="base" color='blue'>Title</H4>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<Small color='gray.0'>small text</Small>
+<H4 color='gray.0'>Title</H4>
 
 // raw CSS color value
-<Small color='#f00'>small text</Small>
+<H4 color='#f00'>Title</H4>
 
 // background colors
-<Small bg='blue'>small text</Small>
+<H4 bg='blue'>Title</H4>
 
 // verbose prop
-<Small backgroundColor='blue'>small text</Small>
+<H4 backgroundColor='blue'>Title</H4>
 ```
 
 ### Space
@@ -62,23 +64,23 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 You can see all the space customization [here](https://styled-system.com/api#space).
 
 <Playground>
-    <Small styling="base" m={2}>
-        small text
-    </Small>
+    <H4 styling="base" m={2}>
+        Title
+    </H4>
 </Playground>
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<Small styling="base" m={2}>small text</Small>
+<H4 styling="base" m={2}>Title</H4>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<Small m={16}>small text</Small>
+<H4 m={16}>Title</H4>
 
 // sets margin `'auto'`
-<Small m='auto'>small text</Small>
+<H4 m='auto'>Title</H4>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<Small m={{ mobile:2, tablet:3, desktop:4 }}>small text</Small>
+<H4 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H4>
 ```
 
 ### Typography
@@ -88,37 +90,37 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
 <Playground>
-    <Small styling="base" fontSize={1}>
-        small text
-    </Small>
+    <H4 styling="base" fontSize={4}>
+        Title
+    </H4>
 </Playground>
 
 ```javascript
-// font-size of `theme.fontSizes[1]`
-<Small styling="base" fontSize={1}>small text</Small>
+// font-size of `theme.fontSizes[4]`
+<H4 styling="base" fontSize={4}>Title</H4>
 
 // font-size `32px`
-<Small fontSize={32}>small text</Small>
+<H4 fontSize={32}>Title</H4>
 
 // font-size `'2em'`
-<Small fontSize='2em'>small text</Small>
+<H4 fontSize='2em'>Title</H4>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<Small fontSize={{ mobile:10, desktop:12 }}>small text</Small>
+<H4 fontSize={{ mobile:10, desktop:12 }}>Title</H4>
 
 // fontFamily
-<Small fontFamily='mono'>small text</Small>
+<H4 fontFamily='mono'>Title</H4>
 
 // textAlign
-<Small textAlign='center'>small text</Small>
-<Small textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>small text</Small>
+<H4 textAlign='center'>Title</H4>
+<H4 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H4>
 
 // lineHeight
-<Small lineHeight='1.25'>small text</Small>
+<H4 lineHeight='1.25'>Title</H4>
 
 // fontWeight
-<Small fontWeight='bold'>small text</Small>
+<H4 fontWeight='bold'>Title</H4>
 
 // letterSpacing
-<Small letterSpacing='0.1em'>small text</Small>
+<H4 letterSpacing='0.1em'>Title</H4>
 ```
