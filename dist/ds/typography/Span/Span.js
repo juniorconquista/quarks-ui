@@ -7,7 +7,7 @@ const variants = styled_system_1.variant({
     prop: 'styling',
     variants: {
         base: {
-            color: 'text',
+            color: 'text.default',
             fontSize: 4,
         },
     },

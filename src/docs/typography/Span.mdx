@@ -1,29 +1,28 @@
 ---
-name: H2
+name: Span
 menu: Typography
 ---
 
 import { Playground, Props } from 'docz';
-import { H2 } from '../ds/typography';
+import { Span } from '../../ds/typography';
 
-# H2
+# Span
 
-Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
-
-Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+The _Span_ tag is an inline container used to mark up a part of a text, or a part of a document.
 
 ### Best practices
 
--   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+-   The _Span_ tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+-   The _Span_ tag is much like the _div_ element, but _div_ is a block-level element and _Span_ is an inline element.
 
 ## Properties
 
-<Props of={H2} />
+<Props of={Span} />
 
 ## Basic usage
 
 <Playground>
-    <H2 styling="base">Title</H2>
+    <Span styling="base">span</Span>
 </Playground>
 
 ## Customization
@@ -35,26 +34,26 @@ The color utility parses a component's _color_ and _bg_ props and converts them 
 You can see all the color customization [here](https://styled-system.com/api/#color).
 
 <Playground>
-    <H2 styling="base" color="blue">
-        Title
-    </H2>
+    <Span styling="base" color="blue">
+        span
+    </Span>
 </Playground>
 
 ```javascript
 // picks the value defined in `theme.colors.blue`
-<H2 styling="base" color='blue'>Title</H2>
+<Span styling="base" color='blue'>span</Span>
 
 // picks up a nested color value using dot notation `theme.colors.gray[0]`
-<H2 color='gray.0'>Title</H2>
+<Span color='gray.0'>span</Span>
 
 // raw CSS color value
-<H2 color='#f00'>Title</H2>
+<Span color='#f00'>span</Span>
 
 // background colors
-<H2 bg='blue'>Title</H2>
+<Span bg='blue'>span</Span>
 
 // verbose prop
-<H2 backgroundColor='blue'>Title</H2>
+<Span backgroundColor='blue'>span</Span>
 ```
 
 ### Space
@@ -64,23 +63,23 @@ The space utility converts shorthand margin and padding props to _margin_ and _p
 You can see all the space customization [here](https://styled-system.com/api#space).
 
 <Playground>
-    <H2 styling="base" m={2}>
-        Title
-    </H2>
+    <Span styling="base" m={2}>
+        span
+    </Span>
 </Playground>
 
 ```javascript
 // sets margin value of `theme.space[2]`
-<H2 styling="base" m={2}>Title</H2>
+<Span styling="base" m={2}>span</Span>
 
 // sets a margin value of `16px` since it's greater than `theme.space.length`
-<H2 m={16}>Title</H2>
+<Span m={16}>span</Span>
 
 // sets margin `'auto'`
-<H2 m='auto'>Title</H2>
+<Span m='auto'>span</Span>
 
 // sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
-<H2 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H2>
+<Span m={{ mobile:2, tablet:3, desktop:4 }}>span</Span>
 ```
 
 ### Typography
@@ -90,37 +89,37 @@ Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _
 You can see all the typography customization [here](https://styled-system.com/api/#typography).
 
 <Playground>
-    <H2 styling="base" fontSize={6}>
-        Title
-    </H2>
+    <Span styling="base" fontSize={4}>
+        span
+    </Span>
 </Playground>
 
 ```javascript
-// font-size of `theme.fontSizes[6]`
-<H2 styling="base" fontSize={6}>Title</H2>
+// font-size of `theme.fontSizes[4]`
+<Span styling="base" fontSize={4}>span</Span>
 
 // font-size `32px`
-<H2 fontSize={32}>Title</H2>
+<Span fontSize={32}>span</Span>
 
 // font-size `'2em'`
-<H2 fontSize='2em'>Title</H2>
+<Span fontSize='2em'>span</Span>
 
 // font-size `10px` on all viewports and `12px` from the first breakpoint and up
-<H2 fontSize={{ mobile:10, desktop:12 }}>Title</H2>
+<Span fontSize={{ mobile:10, desktop:12 }}>span</Span>
 
 // fontFamily
-<H2 fontFamily='mono'>Title</H2>
+<Span fontFamily='mono'>span</Span>
 
 // textAlign
-<H2 textAlign='center'>Title</H2>
-<H2 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H2>
+<Span textAlign='center'>span</Span>
+<Span textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>span</Span>
 
 // lineHeight
-<H2 lineHeight='1.25'>Title</H2>
+<Span lineHeight='1.25'>span</Span>
 
 // fontWeight
-<H2 fontWeight='bold'>Title</H2>
+<Span fontWeight='bold'>span</Span>
 
 // letterSpacing
-<H2 letterSpacing='0.1em'>Title</H2>
+<Span letterSpacing='0.1em'>span</Span>
 ```
