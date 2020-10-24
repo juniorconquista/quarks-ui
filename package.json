@@ -1,17 +1,12 @@
 {
     "name": "quarks-ui",
-    "version": "0.0.6",
+    "version": "0.0.8",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
-        "build": "tsc",
         "build:watch": "tsc --watch",
-        "docz:dev": "docz dev",
-        "docz:build": "docz build",
-        "docz:serve": "docz build && docz serve",
         "format": "prettier --write \"**/*.{json,md,ts,tsx}\" ",
         "test": "jest --watch",
-        "publish": "npm run prepublish && npm publish",
         "prepublish": "npm run build",
         "test:coverage": "yarn test --coverage --watchAll=false"
     },
@@ -42,6 +37,7 @@
         "@babel/plugin-proposal-class-properties": "^7.10.4",
         "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
         "@babel/plugin-syntax-jsx": "^7.10.4",
+        "@babel/preset-env": "^7.12.1",
         "@babel/preset-react": "^7.10.4",
         "@babel/preset-typescript": "^7.10.4",
         "@types/jest": "^26.0.14",
@@ -58,9 +54,8 @@
         "react-test-renderer": "^16.13.1"
     },
     "dependencies": {
-        "docz": "next",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
         "styled-components": "^5.2.0",
         "styled-system": "^5.1.5",
         "typescript": "^4.0.3"

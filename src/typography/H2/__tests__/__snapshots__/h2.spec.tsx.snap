@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H2 basic snapshot 1`] = `
+.c0 {
+  color: #343a40;
+  font-size: 1.5rem;
+}
+
+<h2
+  className="c0"
+/>
+`;

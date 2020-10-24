@@ -1,6 +1,7 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
+        "esModuleInterop": true,
         "declaration": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
@@ -16,34 +17,38 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "strictNullChecks": false,
-        "target": "es2016",
+        "target": "es5",
         "jsx": "react"
     },
     "include": ["src/**/*.ts", "src/**/*.tsx"],
-    "exclude": ["src/gatsby-theme-docz", "src/docs", "src/ds/**/__tests__"]
+    "exclude": ["src/ds/**/__tests__"]
 }
-
 // {
-//     "compileOnSave": true,
 //     "compilerOptions": {
-//         "declaration": true,
-//         "experimentalDecorators": true,
-//         "emitDecoratorMetadata": true,
-//         "module": "commonjs",
-//         "newLine": "LF",
-//         "noFallthroughCasesInSwitch": true,
-//         "noImplicitAny": true,
-//         "noImplicitReturns": true,
-//         "noImplicitThis": false,
-//         "noUnusedParameters": false,
-//         "noUnusedLocals": true,
-//         "outDir": "dist",
+//         "target": "es5",
+//         "lib": [
+//             "dom",
+//             "dom.iterable",
+//             "esnext"
+//         ],
+//         "esModuleInterop": true,
+//         "allowJs": true,
 //         "skipLibCheck": true,
-//         "sourceMap": true,
-//         "strictNullChecks": false,
-//         "target": "es2016"
+//         "allowSyntheticDefaultImports": true,
+//         "strict": true,
+//         "forceConsistentCasingInFileNames": true,
+//         "module": "esnext",
+//         "moduleResolution": "node",
+//         "resolveJsonModule": true,
+//         "isolatedModules": true,
+//         "noEmit": true,
+//         "outDir": "dist",
+//         "jsx": "preserve"
 //     },
 //     "include": [
-//         "src/**/*.ts"
+//         "src"
+//     ],
+//     "exclude": [
+//         "src/ds/**/__tests__"
 //     ]
 // }

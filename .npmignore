@@ -1,0 +1,10 @@
+#dev
+src
+
+# testing
+coverage
+jest.config.js
+
+# dependencies
+node_modules
+

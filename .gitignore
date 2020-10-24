@@ -7,7 +7,6 @@
 /coverage
 
 # production
-/build
 /dist
 
 # misc
@@ -23,7 +22,3 @@ yarn-error.log*
 
 .vscode/*
 ./package-lock.json
-
-
-#docz
-.docz
