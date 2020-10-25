@@ -8,6 +8,7 @@
 
 # production
 /dist
+# /public
 
 # misc
 .DS_Store
@@ -22,3 +23,6 @@ yarn-error.log*
 
 .vscode/*
 ./package-lock.json
+
+# documentation
+.docz

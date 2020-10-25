@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
   <a href="https://github.com/juniorconquista/quarks-ui">
     <img alt="quarks-ui" src="https://github.com/juniorconquista/quarks-ui/blob/master/quarks-ui.png" height="150px" />
   </a>
@@ -24,12 +24,12 @@ Several quick start options are available:
   git clone https://github.com/juniorconquista/quarks-ui.git
 ```
 
--   Install with [npm](https://www.npmjs.com/): 
+-   Install with [npm](https://www.npmjs.com/):
 ```
   npm install quarks-ui
 ```
 
--   Install with [yarn](https://yarnpkg.com/): 
+-   Install with [yarn](https://yarnpkg.com/):
 ```
   yarn add quarks-ui
 ```
@@ -38,4 +38,4 @@ Several quick start options are available:
 
 Code and documentation copyright 2020 the [quarks-ui](https://github.com/juniorconquista/quarks-ui).
 
-<a href="https://github.com/juniorconquista/quarks-ui/blob/master/LICENSE">MIT License</a>
+<a href="https://github.com/juniorconquista/quarks-ui/blob/master/LICENSE">MIT License</a> -->

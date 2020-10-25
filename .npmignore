@@ -1,5 +1,6 @@
-#dev
+# dev
 src
+public
 
 # testing
 coverage
@@ -8,3 +9,6 @@ jest.config.js
 # dependencies
 node_modules
 
+# documentation
+doczrc.js
+.docz

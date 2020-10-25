@@ -1,0 +1,126 @@
+---
+name: H3
+menu: Typography
+---
+
+import { Playground, Props } from 'docz';
+import H3 from './H3';
+
+# H3
+
+Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+
+### Best practices
+
+-   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
+## Properties
+
+<Props of={H3} />
+
+## Basic usage
+
+<Playground>
+    <H3 styling="base">Title</H3>
+</Playground>
+
+## Customization
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+<Playground>
+    <H3 styling="base" color="blue">
+        Title
+    </H3>
+</Playground>
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<H3 styling="base" color='blue'>Title</H3>
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<H3 color='gray.0'>Title</H3>
+
+// raw CSS color value
+<H3 color='#f00'>Title</H3>
+
+// background colors
+<H3 bg='blue'>Title</H3>
+
+// verbose prop
+<H3 backgroundColor='blue'>Title</H3>
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+<Playground>
+    <H3 styling="base" m={2}>
+        Title
+    </H3>
+</Playground>
+
+```javascript
+// sets margin value of `theme.space[2]`
+<H3 styling="base" m={2}>Title</H3>
+
+// sets a margin value of `16px` since it's greater than `theme.space.length`
+<H3 m={16}>Title</H3>
+
+// sets margin `'auto'`
+<H3 m='auto'>Title</H3>
+
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<H3 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H3>
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+<Playground>
+    <H3 styling="base" fontSize={5}>
+        Title
+    </H3>
+</Playground>
+
+```javascript
+// font-size of `theme.fontSizes[5]`
+<H3 styling="base" fontSize={5}>Title</H3>
+
+// font-size `32px`
+<H3 fontSize={32}>Title</H3>
+
+// font-size `'2em'`
+<H3 fontSize='2em'>Title</H3>
+
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<H3 fontSize={{ mobile:10, desktop:12 }}>Title</H3>
+
+// fontFamily
+<H3 fontFamily='mono'>Title</H3>
+
+// textAlign
+<H3 textAlign='center'>Title</H3>
+<H3 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H3>
+
+// lineHeight
+<H3 lineHeight='1.25'>Title</H3>
+
+// fontWeight
+<H3 fontWeight='bold'>Title</H3>
+
+// letterSpacing
+<H3 letterSpacing='0.1em'>Title</H3>
+```

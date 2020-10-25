@@ -1,4 +1,3 @@
-import { SFC } from 'react';
 import styled from 'styled-components';
 import {
     variant,
@@ -58,7 +57,7 @@ const variants = variant({
     },
 } as VariantArgs);
 
-export const Box: SFC<BoxProps> = styled.div<BoxProps>`
+export const Box: React.FC<BoxProps> = styled.div<BoxProps>`
     ${variants}
     ${color}
     ${typography}

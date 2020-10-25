@@ -1,0 +1,126 @@
+---
+name: H4
+menu: Typography
+---
+
+import { Playground, Props } from 'docz';
+import H4 from './H4';
+
+# H4
+
+Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+
+### Best practices
+
+-   Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
+## Properties
+
+<Props of={H4} />
+
+## Basic usage
+
+<Playground>
+    <H4 styling="base">Title</H4>
+</Playground>
+
+## Customization
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+<Playground>
+    <H4 styling="base" color="blue">
+        Title
+    </H4>
+</Playground>
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<H4 styling="base" color='blue'>Title</H4>
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<H4 color='gray.0'>Title</H4>
+
+// raw CSS color value
+<H4 color='#f00'>Title</H4>
+
+// background colors
+<H4 bg='blue'>Title</H4>
+
+// verbose prop
+<H4 backgroundColor='blue'>Title</H4>
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+<Playground>
+    <H4 styling="base" m={2}>
+        Title
+    </H4>
+</Playground>
+
+```javascript
+// sets margin value of `theme.space[2]`
+<H4 styling="base" m={2}>Title</H4>
+
+// sets a margin value of `16px` since it's greater than `theme.space.length`
+<H4 m={16}>Title</H4>
+
+// sets margin `'auto'`
+<H4 m='auto'>Title</H4>
+
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<H4 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H4>
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+<Playground>
+    <H4 styling="base" fontSize={4}>
+        Title
+    </H4>
+</Playground>
+
+```javascript
+// font-size of `theme.fontSizes[4]`
+<H4 styling="base" fontSize={4}>Title</H4>
+
+// font-size `32px`
+<H4 fontSize={32}>Title</H4>
+
+// font-size `'2em'`
+<H4 fontSize='2em'>Title</H4>
+
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<H4 fontSize={{ mobile:10, desktop:12 }}>Title</H4>
+
+// fontFamily
+<H4 fontFamily='mono'>Title</H4>
+
+// textAlign
+<H4 textAlign='center'>Title</H4>
+<H4 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>Title</H4>
+
+// lineHeight
+<H4 lineHeight='1.25'>Title</H4>
+
+// fontWeight
+<H4 fontWeight='bold'>Title</H4>
+
+// letterSpacing
+<H4 letterSpacing='0.1em'>Title</H4>
+```
