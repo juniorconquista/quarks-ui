@@ -23,6 +23,7 @@ yarn-error.log*
 .vscode/*
 ./package-lock.json
 
+/dist
 
 #docz
 .docz
