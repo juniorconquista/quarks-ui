@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/dist
+/lib
 /public
 
 # misc
@@ -22,7 +22,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode/*
-./package-lock.json
+package-lock.json
 
 # documentation
 .docz
