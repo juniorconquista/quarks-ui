@@ -30,67 +30,28 @@ import { Box } from 'quarks-ui/subatomicParticles';
     <Box styling="row">Row</Box>
 </Playground>
 
-## Customization
+### Styling
 
-### Border
-
-The border utility includes style props for _border_, _borderWidth_, _borderStyle_, _borderColor_, _borderRadius_, _borderTop_, _borderTopWidth_, _borderTopStyle_, _borderTopColor_, _borderTopLeftRadius_, _borderTopRightRadius_, _borderRight_, _borderRightWidth_, _borderRightStyle_, _borderRightColor_, _borderBottom_, _borderBottomWidth_, _borderBottomStyle_, _borderBottomColor_, _borderBottomLeftRadius_, _borderBottomRightRadius_, _borderLeft_, _borderLeftWidth_, _borderLeftStyle_, _borderLeftColor_, _borderX_, and _borderY_.
-
-You can see all the color customization [here](https://styled-system.com/api/#border).
-
-<Playground>
-    <Box styling="row" border="1px solid">
-        Row
-    </Box>
-</Playground>
-
-```javascript
-<Box styling="row" border='1px solid' />
-<Box styling="row" borderTop='1px solid' />
-<Box styling="row" borderRight='1px solid' />
-<Box styling="row" borderBottom='1px solid' />
-<Box styling="row" borderLeft='1px solid' />
-
-// borderWidth
-<Box styling="row" borderWidth='4px' />
-
-// borderStyle
-<Box styling="row" borderStyle='dotted' />
-
-// borderColor
-<Box styling="row" borderColor='blue' />
-
-// borderRadius
-<Box styling="row" borderRadius={4} />
+```css
+/* ROW default styles: */
+align-items: 'center',
+display: 'flex',
+flex-direction: 'row',
+justify-content: 'center',
 ```
 
-### Color
+```css
+/* COLUMN default styles: */
+align-items: 'center';
+display: 'flex';
+flex-direction: 'column';
+justify-content: 'center';
+```
 
-The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
-
-You can see all the color customization [here](https://styled-system.com/api/#color).
-
-<Playground>
-    <Box styling="base" color="blue">
-        Row
-    </Box>
-</Playground>
-
-```javascript
-// picks the value defined in `theme.colors.blue`
-<Box styling="base" color='blue' />
-
-// picks up a nested color value using dot notation `theme.colors.gray[0]`
-<Box color='gray.0' />
-
-// raw CSS color value
-<Box color='#f00' />
-
-// background colors
-<Box bg='blue' />
-
-// verbose prop
-<Box backgroundColor='blue' />
+```css
+/* GRID default styles: */
+align-items: 'start';
+display: 'grid';
 ```
 
 ### Flexbox
@@ -100,9 +61,18 @@ The flexbox utility includes style props for _alignItems_, _alignContent_, _just
 You can see all the flexbox customization [here](https://styled-system.com/api/#flexbox).
 
 <Playground>
-    <Box styling="row" justifyContent="flex-start">
-        <Box styling="row">Row</Box>
-        <Box styling="row">Row</Box>
+    <Box
+        styling="row"
+        border="1px solid"
+        justifyContent="flex-start"
+        padding="5px"
+    >
+        <Box styling="row" border="1px solid" padding="5px">
+            Row
+        </Box>
+        <Box styling="row" border="1px solid" padding="5px">
+            Row
+        </Box>
     </Box>
 </Playground>
 
@@ -145,11 +115,19 @@ The grid utility includes style props for _gridGap_, _gridColumnGap_, _gridRowGa
 You can see all the grid layout customization [here](https://styled-system.com/api/#grid-layout).
 
 <Playground>
-    <Box styling="grid" gridTemplateColumns="repeat(4, 1fr)">
-        <Box styling="row">Row</Box>
-        <Box styling="row">Row</Box>
-        <Box styling="row">Row</Box>
-        <Box styling="row">Row</Box>
+    <Box styling="grid" gridTemplateColumns="repeat(4, 1fr)" gridGap={10}>
+        <Box styling="row" border="1px solid">
+            Row
+        </Box>
+        <Box styling="row" border="1px solid">
+            Row
+        </Box>
+        <Box styling="row" border="1px solid">
+            Row
+        </Box>
+        <Box styling="row" border="1px solid">
+            Row
+        </Box>
     </Box>
 </Playground>
 
@@ -194,6 +172,69 @@ You can see all the grid layout customization [here](https://styled-system.com/a
 <Box styling="grid" gridArea='a' />
 ```
 
+## Customization
+
+### Border
+
+The border utility includes style props for _border_, _borderWidth_, _borderStyle_, _borderColor_, _borderRadius_, _borderTop_, _borderTopWidth_, _borderTopStyle_, _borderTopColor_, _borderTopLeftRadius_, _borderTopRightRadius_, _borderRight_, _borderRightWidth_, _borderRightStyle_, _borderRightColor_, _borderBottom_, _borderBottomWidth_, _borderBottomStyle_, _borderBottomColor_, _borderBottomLeftRadius_, _borderBottomRightRadius_, _borderLeft_, _borderLeftWidth_, _borderLeftStyle_, _borderLeftColor_, _borderX_, and _borderY_.
+
+You can see all the color customization [here](https://styled-system.com/api/#border).
+
+<Playground>
+    <Box styling="row" border="1px solid">
+        Row
+    </Box>
+</Playground>
+
+```javascript
+<Box styling="row" border='1px solid' />
+<Box styling="row" borderTop='1px solid' />
+<Box styling="row" borderRight='1px solid' />
+<Box styling="row" borderBottom='1px solid' />
+<Box styling="row" borderLeft='1px solid' />
+
+// borderWidth
+<Box styling="row" borderWidth='4px' />
+
+// borderStyle
+<Box styling="row" borderStyle='dotted' />
+
+// borderColor
+<Box styling="row" borderColor='blue' />
+
+// borderRadius
+<Box styling="row" borderRadius={4} />
+```
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+<Playground>
+    <Box styling="base" border="1px solid" color="blue">
+        Row
+    </Box>
+</Playground>
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<Box styling="base" color='blue' />
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<Box color='gray.0' />
+
+// raw CSS color value
+<Box color='#f00' />
+
+// background colors
+<Box bg='blue' />
+
+// verbose prop
+<Box backgroundColor='blue' />
+```
+
 ### Layout
 
 The layout utility includes style props for _width_, _height_, _display_, _minWidth_, _minHeight_, _maxWidth_, _maxHeight_, _size_, _verticalAlign_, _overflow_, _overflowX_, and _overflowY_.
@@ -201,7 +242,7 @@ The layout utility includes style props for _width_, _height_, _display_, _minWi
 You can see all the layout customization [here](https://styled-system.com/api#layout).
 
 <Playground>
-    <Box styling="row" width={1 / 2}>
+    <Box styling="row" border="1px solid" width={1 / 2}>
         Row
     </Box>
 </Playground>
