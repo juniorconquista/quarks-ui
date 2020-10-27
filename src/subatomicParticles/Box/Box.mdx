@@ -29,3 +29,324 @@ import { Box } from 'quarks-ui/subatomicParticles';
 <Playground>
     <Box styling="row">Row</Box>
 </Playground>
+
+## Customization
+
+### Border
+
+The border utility includes style props for _border_, _borderWidth_, _borderStyle_, _borderColor_, _borderRadius_, _borderTop_, _borderTopWidth_, _borderTopStyle_, _borderTopColor_, _borderTopLeftRadius_, _borderTopRightRadius_, _borderRight_, _borderRightWidth_, _borderRightStyle_, _borderRightColor_, _borderBottom_, _borderBottomWidth_, _borderBottomStyle_, _borderBottomColor_, _borderBottomLeftRadius_, _borderBottomRightRadius_, _borderLeft_, _borderLeftWidth_, _borderLeftStyle_, _borderLeftColor_, _borderX_, and _borderY_.
+
+You can see all the color customization [here](https://styled-system.com/api/#border).
+
+<Playground>
+    <Box styling="row" border="1px solid">
+        Row
+    </Box>
+</Playground>
+
+```javascript
+<Box styling="row" border='1px solid' />
+<Box styling="row" borderTop='1px solid' />
+<Box styling="row" borderRight='1px solid' />
+<Box styling="row" borderBottom='1px solid' />
+<Box styling="row" borderLeft='1px solid' />
+
+// borderWidth
+<Box styling="row" borderWidth='4px' />
+
+// borderStyle
+<Box styling="row" borderStyle='dotted' />
+
+// borderColor
+<Box styling="row" borderColor='blue' />
+
+// borderRadius
+<Box styling="row" borderRadius={4} />
+```
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+<Playground>
+    <Box styling="base" color="blue">
+        Row
+    </Box>
+</Playground>
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<Box styling="base" color='blue' />
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<Box color='gray.0' />
+
+// raw CSS color value
+<Box color='#f00' />
+
+// background colors
+<Box bg='blue' />
+
+// verbose prop
+<Box backgroundColor='blue' />
+```
+
+### Flexbox
+
+The flexbox utility includes style props for _alignItems_, _alignContent_, _justifyItems_, _justifyContent_, _flexWrap_, _flexDirection_, _flex_, _flexGrow_, _flexShrink_, _flexBasis_, _justifySelf_, _alignSelf_, and _order_.
+
+You can see all the flexbox customization [here](https://styled-system.com/api/#flexbox).
+
+<Playground>
+    <Box styling="row" justifyContent="flex-start">
+        <Box styling="row">Row</Box>
+        <Box styling="row">Row</Box>
+    </Box>
+</Playground>
+
+```javascript
+// alignItems
+<Box styling="row" alignItems='center' />
+
+// alignContent
+<Box styling="row" alignContent='center' />
+
+// justifyContent
+<Box styling="row" justifyContent='center' />
+
+// flexWrap
+<Box styling="row" flexWrap='wrap' />
+
+// flexBasis
+<Box styling="row" flexBasis='auto' />
+
+// flexDirection
+<Box styling="row" flexDirection='column' />
+
+// flex
+<Box styling="row" flex='1 1 auto' />
+
+// justifySelf
+<Box styling="row" justifySelf='center' />
+
+// alignSelf
+<Box styling="row" alignSelf='center' />
+
+// order
+<Box styling="row" order='2' />
+```
+
+### Grid Layout
+
+The grid utility includes style props for _gridGap_, _gridColumnGap_, _gridRowGap_, _gridColumn_, _gridRow_, _gridAutoFlow_, _gridAutoColumns_, _gridAutoRows_, _gridTemplateColumns_, _gridTemplateRows_, _gridTemplateAreas_, and _gridArea_.
+
+You can see all the grid layout customization [here](https://styled-system.com/api/#grid-layout).
+
+<Playground>
+    <Box styling="grid" gridTemplateColumns="repeat(4, 1fr)">
+        <Box styling="row">Row</Box>
+        <Box styling="row">Row</Box>
+        <Box styling="row">Row</Box>
+        <Box styling="row">Row</Box>
+    </Box>
+</Playground>
+
+```javascript
+// gridGap
+<Box styling="grid" gridGap={10} />
+<Box styling="grid" gridGap={{ mobile: 1, tablet: 2, desktop: 3 }} />
+
+// gridColumnGap
+<Box styling="grid" gridColumnGap={10} />
+<Box styling="grid" gridColumnGap={{ mobile: 1, tablet: 2, desktop: 3 }} />
+
+// gridRowGap
+<Box styling="grid" gridRowGap={10} />
+<Box styling="grid" gridRowGap={{ mobile: 1, tablet: 2, desktop: 3 }} />
+
+// gridColumn
+<Box styling="grid" gridColumn={1} />
+
+// gridRow
+<Box styling="grid" gridRow={1} />
+
+// gridAutoFlow
+<Box styling="grid" gridAutoFlow='row' />
+
+// gridAutoColumns
+<Box styling="grid" gridAutoColumns='auto' />
+
+// gridAutoRows
+<Box styling="grid" gridAutoRows='auto' />
+
+// gridTemplateColumns
+<Box styling="grid" gridTemplateColumns='1fr 2fr' />
+
+// gridTemplateRows
+<Box styling="grid" gridTemplateRows='auto' />
+
+// gridTemplateAreas
+<Box styling="grid" gridTemplateAreas='a b' />
+
+// gridArea
+<Box styling="grid" gridArea='a' />
+```
+
+### Layout
+
+The layout utility includes style props for _width_, _height_, _display_, _minWidth_, _minHeight_, _maxWidth_, _maxHeight_, _size_, _verticalAlign_, _overflow_, _overflowX_, and _overflowY_.
+
+You can see all the layout customization [here](https://styled-system.com/api#layout).
+
+<Playground>
+    <Box styling="row" width={1 / 2}>
+        Row
+    </Box>
+</Playground>
+
+```javascript
+// width `50%`
+<Box styling="row" width={1/2} />
+
+// width `256px`
+<Box styling="row" width={256} />
+
+// width `'2em'`
+<Box styling="row" width='2em' />
+
+// width `100%` on all viewports and `50%` from the smallest breakpoint and up
+<Box styling="row" width={{ mobile: 1/2, tablet: 1, desktop: 2 }} />
+
+// width from `theme.sizes`
+<Box styling="row" width='medium' />
+
+// display
+<Box styling="row" display='inline-block' />
+<Box styling="row" display={{ mobile: 'block', tablet: 'block', desktop: 'inline-block' }} />
+
+// maxWidth
+<Box styling="row" maxWidth={1024} />
+<Box styling="row" maxWidth={{ mobile: null, tablet: 768, desktop: 1024 }} />
+
+// minWidth
+<Box styling="row" minWidth={128} />
+<Box styling="row" minWidth={{ mobile: 96, tablet: 128, desktop: 256 }} />
+
+// height
+<Box styling="row" height={64} />
+<Box styling="row" height={{ mobile: 96, tablet: 128, desktop: 256 }} />
+
+// maxHeight
+<Box styling="row" maxHeight={512} />
+<Box styling="row" maxHeight={{ mobile: 96, tablet: 128, desktop: 256 }} />
+
+// minHeight
+<Box styling="row" minHeight={512} />
+<Box styling="row" minHeight={{ mobile: 96, tablet: 128, desktop: 256 }} />
+
+// size (width & height)
+<Box styling="row" size={32} />
+<Box styling="row" size={{ mobile: 96, tablet: 128, desktop: 256 }} />
+
+// overflow
+<Box styling="row" overflow='hidden' />
+
+// overflowX
+<Box styling="row" overflowX='hidden' />
+
+// overflowY
+<Box styling="row" overflowY='hidden' />
+```
+
+### Position
+
+The position utility includes style props for _position_, _zIndex_, _top_, _right_, _bottom_, and _left_.
+
+You can see all the position customization [here](https://styled-system.com/api#position).
+
+<Playground>
+    <Box styling="row" position="absolute">
+        Row
+    </Box>
+</Playground>
+
+```javascript
+// position
+<Box styling="row" position='absolute' />
+
+// zIndex
+<Box styling="row" zIndex={2} />
+
+// top, right, bottom, left
+<Box styling="row" top='0' right='0' bottom='0' left='0' />
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+<Playground>
+    <Box styling="row" m={2}>
+        Row
+    </Box>
+</Playground>
+
+```javascript
+// sets margin value of `theme.space[2]`
+<Box styling="row" m={2} />
+
+// sets a margin value of `16px` since it's greater than `theme.space.length`
+<Box m={16} />
+
+// sets margin `'auto'`
+<Box m='auto' />
+
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<Box m={{ mobile:2, tablet:3, desktop:4 }} />
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+<Playground>
+    <Box styling="base" fontSize={8}>
+        Row
+    </Box>
+</Playground>
+
+```javascript
+// font-size of `theme.fontSizes[8]`
+<Box styling="base" fontSize={8} />
+
+// font-size `32px`
+<Box fontSize={32} />
+
+// font-size `'2em'`
+<Box fontSize='2em' />
+
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<Box fontSize={{ mobile:10, desktop:12 }} />
+
+// fontFamily
+<Box fontFamily='mono' />
+
+// textAlign
+<Box textAlign='center' />
+<Box textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }} />
+
+// lineHeight
+<Box lineHeight='1.25' />
+
+// fontWeight
+<Box fontWeight='bold' />
+
+// letterSpacing
+<Box letterSpacing='0.1em' />
+```
