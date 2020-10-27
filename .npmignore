@@ -1,6 +1,12 @@
 # dev
+.babelrc
+.editorconfig
+.gitignore
 src
 public
+tsconfig.json
+.prettierignore
+.prettierrc.json
 
 # testing
 coverage
@@ -8,6 +14,8 @@ jest.config.js
 
 # dependencies
 node_modules
+yarn.lock
+package-lock.json
 
 # documentation
 doczrc.js
