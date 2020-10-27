@@ -10,7 +10,7 @@
         "docz:build": "rm -rf ./public && docz build",
         "docz:serve": "rm -rf ./public && docz build && docz serve",
         "docz:deploy": "gh-pages -d public",
-        "format": "prettier --write \"**/*.{json,md,ts,tsx}\" ",
+        "format": "prettier --write \"src/**/*.{json,md,ts,tsx}\" ",
         "test": "jest --watch",
         "test:coverage": "yarn test --coverage --watchAll=false",
         "prepublish": "npm run build"
