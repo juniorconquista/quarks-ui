@@ -1,187 +1,218 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
+import ThemeTest from '../../../utils/utils.test';
 import 'jest-styled-components';
 
 import Box from '../Box';
 import theme from '../../../theme';
+import { flex, zIndex } from 'styled-system';
 
 describe('Box', () => {
     test('basic snapshot', () => {
-        const tree = renderer
+        const box = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Box styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(box).toMatchSnapshot();
     });
 
     test('should inherit the styling properties of the base variant', () => {
-        const tree = renderer
+        const box = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Box styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'column');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'column');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should inherit the styling properties of the row variant', () => {
-        const tree = renderer
+        const box = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Box styling="row" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'row');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'row');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should inherit the styling properties of the column variant', () => {
-        const tree = renderer
+        const box = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Box styling="column" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'column');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'column');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should inherit the styling properties of the grid variant', () => {
-        const tree = renderer
+        const box = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Box styling="grid" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('display', 'grid');
-        expect(tree).toHaveStyleRule('flex-direction', 'column');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'start');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('display', 'grid');
+        expect(box).toHaveStyleRule('flex-direction', 'column');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'start');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should inherit the styling properties of the overlay variant', () => {
-        const tree = renderer
+        const box = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Box styling="overlay" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('position', 'fixed');
-        expect(tree).toHaveStyleRule('left', '0');
-        expect(tree).toHaveStyleRule('right', '0');
-        expect(tree).toHaveStyleRule('top', '0');
-        expect(tree).toHaveStyleRule('bottom', '0');
-        expect(tree).toHaveStyleRule('z-index', '9999');
+        expect(box).toHaveStyleRule('position', 'fixed');
+        expect(box).toHaveStyleRule('left', '0');
+        expect(box).toHaveStyleRule('right', '0');
+        expect(box).toHaveStyleRule('top', '0');
+        expect(box).toHaveStyleRule('bottom', '0');
+        expect(box).toHaveStyleRule('z-index', '9999');
     });
 
     test('should apply custom border styling properties', () => {
-        const tree = renderer
-            .create(<Box styling="row" border="1px solid" />)
+        const box = renderer
+            .create(
+                <ThemeTest>
+                    <Box styling="row" border="1px solid" />
+                </ThemeTest>,
+            )
             .toJSON();
-        expect(tree).toHaveStyleRule('border', '1px solid');
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'row');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('border', '1px solid');
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'row');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should apply custom color styling properties', () => {
-        const tree = renderer
-            .create(<Box styling="row" border="1px solid" color="blue" />)
+        const box = renderer
+            .create(
+                <ThemeTest>
+                    <Box
+                        styling="row"
+                        border="1px solid"
+                        color={theme.colors.primary}
+                    />
+                </ThemeTest>,
+            )
             .toJSON();
-        expect(tree).toHaveStyleRule('color', 'blue');
-        expect(tree).toHaveStyleRule('border', '1px solid');
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'row');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('color', theme.colors.primary.default);
+        expect(box).toHaveStyleRule('border', '1px solid');
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'row');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should apply custom layout styling properties', () => {
-        const tree = renderer
-            .create(<Box styling="row" border="1px solid" width={1 / 2} />)
+        const box = renderer
+            .create(
+                <ThemeTest>
+                    <Box styling="row" border="1px solid" width={1 / 2} />
+                </ThemeTest>,
+            )
             .toJSON();
-        expect(tree).toHaveStyleRule('width', '50%');
-        expect(tree).toHaveStyleRule('border', '1px solid');
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'row');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('width', '50%');
+        expect(box).toHaveStyleRule('border', '1px solid');
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'row');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should apply custom position styling properties', () => {
-        const tree = renderer
-            .create(<Box styling="row" position="absolute" />)
+        const box = renderer
+            .create(
+                <ThemeTest>
+                    <Box styling="row" position="absolute" />
+                </ThemeTest>,
+            )
             .toJSON();
-        expect(tree).toHaveStyleRule('position', 'absolute');
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'row');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('position', 'absolute');
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'row');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should apply custom position styling properties', () => {
-        const tree = renderer.create(<Box styling="row" m={2} />).toJSON();
-        expect(tree).toHaveStyleRule('margin', '8px');
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'row');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        const box = renderer
+            .create(
+                <ThemeTest>
+                    <Box styling="row" m="xxs" />
+                </ThemeTest>,
+            )
+            .toJSON();
+        expect(box).toHaveStyleRule('margin', theme.space.xxs);
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'row');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
 
     test('should apply custom typography styling properties', () => {
-        const tree = renderer
-            .create(<Box styling="base" fontSize={8} />)
+        const box = renderer
+            .create(
+                <ThemeTest>
+                    <Box styling="base" fontSize={8} />
+                </ThemeTest>,
+            )
             .toJSON();
-        expect(tree).toHaveStyleRule('font-size', '72px');
-        expect(tree).toHaveStyleRule('display', 'flex');
-        expect(tree).toHaveStyleRule('flex-direction', 'column');
-        expect(tree).toHaveStyleRule('justify-content', 'center');
-        expect(tree).toHaveStyleRule('align-items', 'center');
-        expect(tree).toHaveStyleRule('outline', 'none', {
+        expect(box).toHaveStyleRule('font-size', theme.fontSizes[8]);
+        expect(box).toHaveStyleRule('display', 'flex');
+        expect(box).toHaveStyleRule('flex-direction', 'column');
+        expect(box).toHaveStyleRule('justify-content', 'center');
+        expect(box).toHaveStyleRule('align-items', 'center');
+        expect(box).toHaveStyleRule('outline', 'none', {
             modifier: '&:focus',
         });
     });
