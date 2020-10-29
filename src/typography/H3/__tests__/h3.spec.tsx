@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
+import ThemeTest from '../../../utils/utils.test';
 import 'jest-styled-components';
 
 import H3 from '../H3';
@@ -8,46 +8,46 @@ import theme from '../../../theme';
 
 describe('H3', () => {
     test('basic snapshot', () => {
-        const tree = renderer
+        const h3 = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <H3 styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(h3).toMatchSnapshot();
     });
 
     test('should inherit the styling properties of the base variant', () => {
-        const tree = renderer
+        const h3 = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <H3 styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('color', theme.colors.text.default);
-        expect(tree).toHaveStyleRule('font-size', theme.fontSizes[5]);
+        expect(h3).toHaveStyleRule('color', theme.colors.text.default);
+        expect(h3).toHaveStyleRule('font-size', theme.fontSizes[5]);
     });
 
     test('should inherit the styling properties of the light variant', () => {
-        const tree = renderer
+        const h3 = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <H3 styling="light" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('color', theme.colors.text.default);
-        expect(tree).toHaveStyleRule('font-size', theme.fontSizes[5]);
-        expect(tree).toHaveStyleRule('font-weight', 'normal');
+        expect(h3).toHaveStyleRule('color', theme.colors.text.default);
+        expect(h3).toHaveStyleRule('font-size', theme.fontSizes[5]);
+        expect(h3).toHaveStyleRule('font-weight', 'normal');
     });
 
     test('should apply custom styling properties', () => {
-        const tree = renderer
+        const h3 = renderer
             .create(<H3 styling="base" mt="20px" p="3px" />)
             .toJSON();
-        expect(tree).toHaveStyleRule('margin-top', '20px');
-        expect(tree).toHaveStyleRule('padding', '3px');
+        expect(h3).toHaveStyleRule('margin-top', '20px');
+        expect(h3).toHaveStyleRule('padding', '3px');
     });
 });
