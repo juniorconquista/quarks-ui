@@ -6,6 +6,7 @@ import {
     PositionProps,
     BorderProps,
     GridProps,
+    FontSizeProps,
 } from 'styled-system';
 
 export type CssProperties = {
@@ -40,6 +41,7 @@ export type CssProperties = {
 export type DefaultStyleProps = BorderProps &
     ColorProps &
     FlexboxProps &
+    FontSizeProps &
     LayoutProps &
     PositionProps &
     SpaceProps &
