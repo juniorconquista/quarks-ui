@@ -1,9 +1,10 @@
+import { CSSProp } from 'styled-components';
 import { DefaultStyleProps, CssProperties } from '../../theme/types';
 
 export type BoxStyledProps = DefaultStyleProps & CssProperties;
 
 export interface BoxProps extends BoxStyledProps {
     /** Each styling variant has unique properties that are inherited through the type informed */
-    styling?: 'row' | 'column' | 'grid' | 'overlay';
-    css?: any;
+    styling?: 'base' | 'row' | 'column' | 'grid' | 'overlay';
+    css?: CSSProp;
 }
