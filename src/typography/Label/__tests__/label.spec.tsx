@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
+import ThemeTest from '../../../utils/utils.test';
 import 'jest-styled-components';
 
 import Label from '../Label';
@@ -8,33 +8,33 @@ import theme from '../../../theme';
 
 describe('Label', () => {
     test('basic snapshot', () => {
-        const tree = renderer
+        const label = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Label styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(label).toMatchSnapshot();
     });
 
     test('should inherit the styling properties of the base variant', () => {
-        const tree = renderer
+        const label = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Label styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('color', theme.colors.text.default);
-        expect(tree).toHaveStyleRule('font-size', theme.fontSizes[4]);
+        expect(label).toHaveStyleRule('color', theme.colors.text.default);
+        expect(label).toHaveStyleRule('font-size', theme.fontSizes[4]);
     });
 
     test('should apply custom styling properties', () => {
-        const tree = renderer
+        const label = renderer
             .create(<Label styling="base" mt="20px" p="3px" />)
             .toJSON();
-        expect(tree).toHaveStyleRule('margin-top', '20px');
-        expect(tree).toHaveStyleRule('padding', '3px');
+        expect(label).toHaveStyleRule('margin-top', '20px');
+        expect(label).toHaveStyleRule('padding', '3px');
     });
 });

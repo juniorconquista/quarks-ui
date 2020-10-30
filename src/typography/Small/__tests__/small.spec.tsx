@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
+import ThemeTest from '../../../utils/utils.test';
 import 'jest-styled-components';
 
 import Small from '../Small';
@@ -8,33 +8,33 @@ import theme from '../../../theme';
 
 describe('Small', () => {
     test('basic snapshot', () => {
-        const tree = renderer
+        const small = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Small styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(small).toMatchSnapshot();
     });
 
     test('should inherit the styling properties of the base variant', () => {
-        const tree = renderer
+        const small = renderer
             .create(
-                <ThemeProvider theme={theme}>
+                <ThemeTest>
                     <Small styling="base" />
-                </ThemeProvider>,
+                </ThemeTest>,
             )
             .toJSON();
-        expect(tree).toHaveStyleRule('color', theme.colors.text.default);
-        expect(tree).toHaveStyleRule('font-size', theme.fontSizes[2]);
+        expect(small).toHaveStyleRule('color', theme.colors.text.default);
+        expect(small).toHaveStyleRule('font-size', theme.fontSizes[2]);
     });
 
     test('should apply custom styling properties', () => {
-        const tree = renderer
+        const small = renderer
             .create(<Small styling="base" mt="20px" p="3px" />)
             .toJSON();
-        expect(tree).toHaveStyleRule('margin-top', '20px');
-        expect(tree).toHaveStyleRule('padding', '3px');
+        expect(small).toHaveStyleRule('margin-top', '20px');
+        expect(small).toHaveStyleRule('padding', '3px');
     });
 });
