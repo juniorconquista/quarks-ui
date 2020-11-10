@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ThemeTest from '../../../utils/utils.test';
+import ThemeTest from '../../../utils/ThemeProviderTest';
 import 'jest-styled-components';
 
 import SPan from '../SPan';
