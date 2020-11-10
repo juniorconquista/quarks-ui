@@ -6,8 +6,8 @@ interface Props {
     children: ReactNode;
 }
 
-const ThemeTest: React.FC<Props> = ({ children }) => (
+const ThemeProviderTest: React.FC<Props> = ({ children }) => (
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 
-export default ThemeTest;
+export default ThemeProviderTest;
