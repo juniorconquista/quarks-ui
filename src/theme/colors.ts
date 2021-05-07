@@ -1,3 +1,5 @@
+
+// teste
 export default (dark = false): any => ({
   dark,
   get primary () {

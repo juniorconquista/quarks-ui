@@ -15,7 +15,8 @@
         "test": "jest --watch",
         "test:coverage": "yarn test --coverage --watchAll=false",
         "prepublish": "npm run build",
-        "pre-commit": "lint-staged"
+        "pre-commit": "lint-staged",
+        "chek": "npm-check -u -s"
     },
     "repository": {
         "type": "git",
@@ -64,12 +65,12 @@
         "jest-styled-components": "^7.0.3",
         "lint-staged": "^10.5.4",
         "make-coverage-badge": "^1.2.0",
-        "prettier": "^2.1.2",
+        "prettier": "^2.2.1",
         "pretty-quick": "^3.0.2",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-test-renderer": "^16.13.1",
-        "typescript": "^4.0.3"
+        "typescript": "^4.2.4"
     },
     "dependencies": {
         "styled-components": "^5.2.0",
