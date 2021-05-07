@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Small basic snapshot 1`] = `
+exports['Small basic snapshot 1'] = `
 .c0 {
   color: #343a40;
   font-size: 0.83rem;
@@ -9,4 +9,4 @@ exports[`Small basic snapshot 1`] = `
 <small
   className="c0"
 />
-`;
+`

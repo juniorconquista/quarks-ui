@@ -1,2 +1,2 @@
-export { default } from './H5';
-export * from './h5.types';
+export { default } from './H5'
+export * from './h5.types'

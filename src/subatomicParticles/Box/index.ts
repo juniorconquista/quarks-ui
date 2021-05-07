@@ -1,2 +1,2 @@
-export { default } from './Box';
-export * from './box.types';
+export { default } from './Box'
+export * from './box.types'

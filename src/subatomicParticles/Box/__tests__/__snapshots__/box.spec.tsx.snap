@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Box basic snapshot 1`] = `
+exports['Box basic snapshot 1'] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -26,4 +26,4 @@ exports[`Box basic snapshot 1`] = `
 <div
   className="c0"
 />
-`;
+`
