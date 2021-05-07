@@ -1,6 +1,4 @@
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 
-export default () => {
-    return useContext(ThemeContext);
-};
+export default (): void => useContext(ThemeContext)

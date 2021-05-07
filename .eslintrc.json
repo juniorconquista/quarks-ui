@@ -8,9 +8,6 @@
       "standard-with-typescript",
       "plugin:react/recommended"
     ],
-    "env": {
-      "cypress/globals": true
-    },
     "plugins": ["react"],
     "parserOptions": {
       "project": "./tsconfig-eslint.json"

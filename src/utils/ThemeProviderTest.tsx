@@ -1,13 +1,13 @@
-import React, { ReactNode } from 'react';
-import { ThemeProvider } from 'styled-components';
-import theme from '../theme';
+import React, { ReactNode } from 'react'
+import { ThemeProvider } from 'styled-components'
+import theme from '../theme'
 
 interface Props {
-    children: ReactNode;
+  children: ReactNode
 }
 
-const ThemeProviderTest: React.FC<Props> = ({ children }) => (
+const ThemeProviderTest: React.FC<Props> = ({ children }: Props) => (
     <ThemeProvider theme={theme}>{children}</ThemeProvider>
-);
+)
 
-export default ThemeProviderTest;
+export default ThemeProviderTest
