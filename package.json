@@ -14,7 +14,8 @@
         "format": "prettier --write \"src/**/*.{json,md,ts,tsx}\" ",
         "test": "jest --watch",
         "test:coverage": "yarn test --coverage --watchAll=false",
-        "prepublish": "npm run build"
+        "prepublish": "npm run build",
+        "pre-commit": "lint-staged"
     },
     "repository": {
         "type": "git",
@@ -29,11 +30,6 @@
         "ui",
         "ux"
     ],
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged"
-        }
-    },
     "author": "Júnior Conquista <conquista.engcomp@gmail.com>",
     "license": "MIT",
     "bugs": {
@@ -52,11 +48,15 @@
         "@types/react-test-renderer": "^16.9.3",
         "@types/styled-components": "^5.1.3",
         "@types/styled-system": "^5.1.10",
+        "@typescript-eslint/eslint-plugin": "^4.22.1",
         "docz": "^2.3.1",
+        "eslint": "^7.25.0",
+        "eslint-config-standard-with-typescript": "^20.0.0",
         "gh-pages": "^3.1.0",
-        "husky": "^4.3.0",
+        "husky": "^6.0.0",
         "jest": "^26.4.2",
         "jest-styled-components": "^7.0.3",
+        "lint-staged": "^10.5.4",
         "make-coverage-badge": "^1.2.0",
         "prettier": "^2.1.2",
         "pretty-quick": "^3.0.2",
