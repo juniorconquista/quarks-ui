@@ -4,8 +4,8 @@ module.exports = {
     collectCoverageFrom: [
       '<rootDir>/packages/quarks/**/*.{ts,tsx}',
       '!<rootDir>/packages/quarks/**/index.ts',
-      '!<rootDir>/packages/quarks/hooks',
-      '!<rootDir>/packages/quarks/theme',
+      '!<rootDir>/packages/quarks/hooks/**',
+      '!<rootDir>/packages/quarks/theme/**',
       '!**/*.d.ts'
     ],
     coverageDirectory: 'coverage',
