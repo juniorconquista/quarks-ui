@@ -1,5 +1,5 @@
 import { CSSProp } from 'styled-components'
-import { DefaultStyleProps, CssProperties } from '../../theme/types'
+import { DefaultStyleProps, CssProperties } from 'quarks/theme/types'
 
 export type BoxStyledProps = DefaultStyleProps & CssProperties
 

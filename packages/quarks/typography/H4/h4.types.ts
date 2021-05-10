@@ -1,5 +1,5 @@
-import { CssProperties, DefaultStyleProps } from '../../theme/types'
 import { TypographyProps } from 'styled-system'
+import { CssProperties, DefaultStyleProps } from 'quarks/theme/types'
 
 export type H4StyledProps = DefaultStyleProps & TypographyProps & CssProperties
 

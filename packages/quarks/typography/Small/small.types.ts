@@ -1,4 +1,4 @@
-import { DefaultStyleProps } from '../../../packages/ds/theme/types'
+import { DefaultStyleProps } from 'quarks/theme/types'
 import { TypographyProps } from 'styled-system'
 
 export type SmallStyledProps = DefaultStyleProps & TypographyProps

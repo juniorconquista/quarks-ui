@@ -1,12 +1,17 @@
 import React from 'react'
+import { useDarkMode } from 'storybook-dark-mode'
 import { Box, H1, H4, P, colors as colorsTheme } from '../../../quarks'
-import { useDarkMode } from 'storybook-dark-mode';
 
+interface Props {
+  styling: string
+  colorLight?: string
+  colorDark?: string
+}
 
-export default (props) => {
-    const colors = colorsTheme(useDarkMode())
+const color: React.FC<Props> = (props: Props): JSX.Element => {
+  const colors = colorsTheme(useDarkMode())
 
-    return (
+  return (
         <Box styling="column">
             <Box
                 styling="column"
@@ -17,7 +22,7 @@ export default (props) => {
                 justifyContent="space-between"
                 boxSizing="border-box"
                 backgroundColor={`${props.styling}.light`}
-                
+
             >
                 <H4
                     styling="base"
@@ -77,5 +82,7 @@ export default (props) => {
                 </H4>
             </Box>
         </Box>
-    )
+  )
 }
+
+export default color

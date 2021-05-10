@@ -40,13 +40,13 @@ export type CssProperties = {
 }
 
 export type DefaultStyleProps = BorderProps &
-  ColorProps &
-  FlexboxProps &
-  FontSizeProps &
-  LayoutProps &
-  PositionProps &
-  SpaceProps &
-  GridProps & {
-    // for some reason this isn't included; this is for replacing the 'base' component
-    // as?: React.ComponentType;
-  }
+ColorProps &
+FlexboxProps &
+FontSizeProps &
+LayoutProps &
+PositionProps &
+SpaceProps &
+GridProps & {
+  // for some reason this isn't included; this is for replacing the 'base' component
+  // as?: React.ComponentType;
+}

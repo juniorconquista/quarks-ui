@@ -11,18 +11,17 @@
         "moduleResolution": "node",
         "jsx": "react",
         "outDir": "lib",
-        "rootDir": "src",
-        "baseUrl": "src",
+        "rootDir": ".",
+        "baseUrl": ".",
         "paths": {
-            "@/*": [
-                "*"
-            ]
-        },
+            "quarks/*": ["./packages/quarks/*"],
+            "docs/*": ["./packages/docs/*"]
+          },
         "allowJs": true,
         "resolveJsonModule": true
     },
     "include": [
-        "src"
+        "."
     ],
     "exclude": [
         "src/**/__tests__",

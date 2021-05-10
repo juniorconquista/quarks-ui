@@ -1,4 +1,4 @@
-import { CssProperties, DefaultStyleProps } from '../../theme/types'
+import { CssProperties, DefaultStyleProps } from 'quarks/theme/types'
 import { TypographyProps } from 'styled-system'
 
 export type PStyledProps = DefaultStyleProps & TypographyProps & CssProperties

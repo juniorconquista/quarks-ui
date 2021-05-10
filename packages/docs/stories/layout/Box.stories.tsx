@@ -1,15 +1,14 @@
-import React from 'react';
-
-import { Meta } from '@storybook/react';
+import React from 'react'
+import { Meta } from '@storybook/react'
 import { Box } from '../../../quarks'
 
+const storie: Meta = {
+  component: Box,
+  title: 'Design System/Box'
+}
 
-export default {
-    component: Box,
-    title: 'Design System/Box',
- 
-} as Meta;
+export default storie
 
-export const row = () => <Box styling="row" color="primary.default">{'Button'}</Box>;
-export const column = () => <Box styling="column" color="primary.default">{'Button'}</Box>;
-export const grid = () => <Box styling="grid" color="primary.default">{'Button'}</Box>;
+export const row: React.FC = () => <Box styling="row" color="primary.default">{'Button'}</Box>
+export const column: React.FC = () => <Box styling="column" color="primary.default">{'Button'}</Box>
+export const grid: React.FC = () => <Box styling="grid" color="primary.default">{'Button'}</Box>
