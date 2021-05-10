@@ -32,7 +32,6 @@
     "url": "https://github.com/juniorconquista/quarks-ui/issues"
   },
   "devDependencies": {
-
     "@types/styled-components": "^5.1.3",
     "@types/styled-system": "^5.1.10",
     "typescript": "^4.2.3"
