@@ -1,0 +1,89 @@
+---
+name: Button
+menu: Layout
+---
+
+import { Playground, Props } from 'docz';
+import Button from './Button';
+
+# Button
+
+The `<Button>` tag defines a clickable button.
+
+Inside a `<Button>` element you can put text (and tags like `<i>`, `<b>`, `<strong>`, `<br>`, `<img>`, etc.). That is not possible with a button created with the `<input>` element!
+
+### Best practices
+
+-   Always specify the `type` attribute for a `<Button>` element, to tell browsers what type of button it is.
+
+## Properties
+
+<Props of={Button} />
+
+## Basic usage
+
+```javascript
+import { Button } from 'quarks-ui';
+```
+
+<Playground>
+    <Button type="button" styling="primary">
+        Primary
+    </Button>
+    <Button type="button" styling="secondary">
+        Secondary
+    </Button>
+    <Button type="button" styling="success">
+        Success
+    </Button>
+    <Button type="button" styling="danger">
+        Danger
+    </Button>
+    <Button type="button" styling="warning">
+        Warning
+    </Button>
+    <Button type="button" styling="info">
+        Info
+    </Button>
+    <Button type="button" styling="link">
+        Link
+    </Button>
+</Playground>
+
+## Outline buttons
+
+In need of a button, but not the hefty background colors they bring? Add the _Outline_ word after styling name ones to remove all background images and colors on any button.
+
+<Playground>
+    <Button type="button" styling="primary" outline>
+        Primary
+    </Button>
+    <Button type="button" styling="secondary" outline>
+        Secondary
+    </Button>
+    <Button type="button" styling="success" outline>
+        Success
+    </Button>
+    <Button type="button" styling="danger" outline>
+        Danger
+    </Button>
+    <Button type="button" styling="warning" outline>
+        Warning
+    </Button>
+    <Button type="button" styling="info" outline>
+        Info
+    </Button>
+</Playground>
+
+## Disabled state
+
+Make buttons look inactive by adding the _disabled_ boolean attribute to any `<button>` element. Disabled buttons have _pointer-events: none_ applied to, preventing hover and active states from triggering.
+
+<Playground>
+    <Button type="button" styling="primary" disabled>
+        Primary
+    </Button>
+    <Button type="button" styling="secondary" disabled>
+        Secondary
+    </Button>
+</Playground>

@@ -50,3 +50,16 @@ GridProps & {
   // for some reason this isn't included; this is for replacing the 'base' component
   // as?: React.ComponentType;
 }
+
+type Color = {
+  default: string
+  dark: string
+  ligth: string
+}
+
+export interface Theme {
+  fontSizes: string[]
+  colors: {
+    [key: string]: Color
+  }
+}

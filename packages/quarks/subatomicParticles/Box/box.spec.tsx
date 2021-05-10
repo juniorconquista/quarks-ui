@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'styled-components'
 import theme from 'quarks/theme'
 import 'jest-styled-components'
-import Box from './Box'
+import Box from './box'
 
 type SutTypes = {
   sut: string
@@ -19,7 +19,7 @@ const makeSut = (component: ReactNode): SutTypes => {
   return { sut }
 }
 
-describe('Box', () => {
+describe('Box component', () => {
   it('should inherit the styling properties of the base variant', () => {
     const { sut } = makeSut(<Box styling="base" />)
     expect(sut).toHaveStyleRule('display', 'flex')
