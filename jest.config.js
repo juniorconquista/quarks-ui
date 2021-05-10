@@ -2,7 +2,10 @@
 module.exports = {
     roots: ['<rootDir>/packages/quarks'],
     collectCoverageFrom: [
-      '<rootDir>/src/**/*.{ts,tsx}',
+      '<rootDir>/packages/quarks/**/*.{ts,tsx}',
+      '!<rootDir>/packages/quarks/**/index.ts',
+      '!<rootDir>/packages/quarks/hooks',
+      '!<rootDir>/packages/quarks/theme',
       '!**/*.d.ts'
     ],
     coverageDirectory: 'coverage',
@@ -15,7 +18,7 @@ module.exports = {
       '.+\\.(ts|tsx)$': 'ts-jest'
     },
     moduleNameMapper: {
-      '@/(.*)': '<rootDir>/src/$1'
+      'quarks/*(.*)': '<rootDir>/packages/quarks/$1'
     }
   }
   

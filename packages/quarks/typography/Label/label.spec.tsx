@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'styled-components'
 import theme from 'quarks/theme'
 import 'jest-styled-components'
-import H3 from './H3'
+import Label from './Label'
 
 type SutTypes = {
   sut: string
@@ -19,22 +19,15 @@ const makeSut = (component: ReactNode): SutTypes => {
   return { sut }
 }
 
-describe('H3 component', () => {
+describe('Label component', () => {
   it('should inherit the styling properties of the base variant', () => {
-    const { sut } = makeSut(<H3 styling="base" />)
+    const { sut } = makeSut(<Label styling="base" />)
     expect(sut).toHaveStyleRule('color', theme.colors.text.default)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[5])
-  })
-
-  it('should inherit the styling properties of the light variant', () => {
-    const { sut } = makeSut(<H3 styling="light" />)
-    expect(sut).toHaveStyleRule('color', theme.colors.text.default)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[5])
-    expect(sut).toHaveStyleRule('font-weight', 'normal')
+    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[4])
   })
 
   it('should apply custom styling properties', () => {
-    const { sut } = makeSut(<H3 styling="base" mt="20px" p="3px" />)
+    const { sut } = makeSut(<Label styling="base" mt="20px" p="3px" />)
     expect(sut).toHaveStyleRule('margin-top', '20px')
     expect(sut).toHaveStyleRule('padding', '3px')
   })
