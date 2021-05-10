@@ -10,7 +10,7 @@ interface Props {
 
 const color: React.FC<Props> = (props: Props): JSX.Element => {
   const colors = colorsTheme(useDarkMode())
-
+  console.log('teste')
   return (
         <Box styling="column">
             <Box
