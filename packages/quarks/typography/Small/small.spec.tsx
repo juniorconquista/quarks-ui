@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'styled-components'
 import theme from 'quarks/theme'
 import 'jest-styled-components'
-import Small from './Small'
+import Small from './small'
 
 type SutTypes = {
   sut: string

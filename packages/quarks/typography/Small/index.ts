@@ -1,2 +1,2 @@
-export { default } from './Small'
+export { default } from './small'
 export * from './small.types'

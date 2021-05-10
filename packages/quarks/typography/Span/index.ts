@@ -1,2 +1,2 @@
-export { default } from './Span'
+export { default } from './span'
 export * from './span.types'

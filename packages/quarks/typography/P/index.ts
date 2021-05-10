@@ -1,2 +1,2 @@
-export { default } from './P'
+export { default } from './p'
 export * from './p.types'

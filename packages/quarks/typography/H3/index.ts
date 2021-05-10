@@ -1,2 +1,2 @@
-export { default } from './H3'
+export { default } from './h3'
 export * from './h3.types'
