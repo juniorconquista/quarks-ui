@@ -3,6 +3,6 @@ node_modules
 coverage
 public
 dist
-src/gatsby-theme-docz
+src/packages/docs/
 *.json
 *.mdx

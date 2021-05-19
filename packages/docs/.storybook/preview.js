@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { addReadme } from 'storybook-readme';
 import ThemeProvider from './themeProvider'
 
 export const decorators = [
@@ -8,4 +8,5 @@ export const decorators = [
             <Story />
         </ThemeProvider>
     ),
+    addReadme
 ];

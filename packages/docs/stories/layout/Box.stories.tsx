@@ -4,7 +4,7 @@ import { Box } from '../../../quarks'
 
 const storie: Meta = {
   component: Box,
-  title: 'Design System/Box'
+  title: 'Layout/Box'
 }
 
 export default storie

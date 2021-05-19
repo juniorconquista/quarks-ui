@@ -1,6 +1,6 @@
 import React from 'react'
-import ThemeProvider from '../../.storybook/themeProvider'
-import { Box } from '../../../quarks'
+import ThemeProvider from '../.storybook/themeProvider'
+import { Box } from '../../quarks'
 import Color from './color'
 
 const Pallete: React.FC = () => (

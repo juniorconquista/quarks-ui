@@ -14,10 +14,13 @@
   "author": "Júnior Conquista <conquista.engcomp@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-storysource": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
-    "storybook-dark-mode": "^1.0.8"
+    "storybook-dark-mode": "^1.0.8",
+    "storybook-readme": "^5.0.9"
   }
 }
