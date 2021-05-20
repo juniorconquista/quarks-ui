@@ -1,5 +1,5 @@
-import React from 'react'
-import { addParameters, Meta } from '@storybook/react'
+import React, { ReactElement, ReactNode } from 'react'
+import { Meta } from '@storybook/react'
 import { Button } from '../../../quarks'
 
 const storie: Meta = {
@@ -43,25 +43,18 @@ const storie: Meta = {
         options: ['small', 'medium', 'large']
       },
       table: {
-        type: { summary: 'small | medium | large' },
+        type: { summary: 'medium | small | large' },
         defaultValue: { summary: 'medium' }
       }
     }
   }
 }
 
-const Template = ({ children, ...args }) => <Button {...args}>{children}</Button>
+const Template = ({ children, ...args }: { children: ReactNode }): ReactElement => <Button {...args}>{children}</Button>
 
-export const Basic = (args) => <Button {...args} />
+export const Basic = (args): ReactElement => <Button {...args} />
 Basic.args = { styling: 'primary', children: 'Button' }
 
-// export const Basic = Template.bind({});
-// Basic.args = {
-//   styling: 'primary',
-//   children: 'Button',
-// };
-
-addParameters({ docs: { previewSource: 'open' } })
 export const Primary = Template.bind({})
 Primary.args = {
   styling: 'primary',
@@ -76,17 +69,8 @@ Primary.parameters = {
   },
   docs: {
     withSource: 'none',
-
     hidden: true
-    // source: {
-    //   hidden: true,
-
-    //   type: 'string',
-    //   Template: <div>a</div>
-
-    // }
   }
-  // control: false
 }
 
 export const Secondary = Template.bind({})
@@ -107,7 +91,7 @@ Danger.args = {
   children: 'Danger'
 }
 
-export const All = () => (
+export const All = (): ReactElement => (
   <>
     <Button styling="primary">Primary</Button>
     <Button styling="success">Success</Button>

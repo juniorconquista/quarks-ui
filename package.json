@@ -12,6 +12,7 @@
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info",
     "pre-commit": "lint-staged",
     "pre-push": "npm run test:ci",
+    "prepare-husky": "husky install",
     "chek": "npm-check -u -s"
   },
   "devDependencies": {
