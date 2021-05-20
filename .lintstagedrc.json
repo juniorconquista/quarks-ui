@@ -1,5 +1,3 @@
 {
-    "packages/quarks/**/*.{ts,tsx}": [
-        "eslint --fix"
-    ]
+  "packages/**/*.{ts,tsx}": ["eslint --fix"]
 }

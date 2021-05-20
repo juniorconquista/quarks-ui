@@ -19,7 +19,7 @@ const variants = variant({
   prop: 'styling',
   variants: {
     base: {
-      background: 'none',
+      background: 'transparent',
       border: '1px solid transparent',
       borderRadius: '.25rem',
       display: 'inline-block',
@@ -29,7 +29,7 @@ const variants = variant({
       padding: '.375rem .75rem',
       textAlign: 'center',
       transition:
-                'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
+        'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
       userSelect: 'none',
       verticalAlign: 'middle',
       whiteSpace: 'nowrap',
@@ -58,8 +58,7 @@ const variants = variant({
           backgroundColor: 'primary.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) =>
-                        `0 0 0 .2rem ${theme.colors.primary.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.primary.default}75`
         }
       }
     },
@@ -73,8 +72,7 @@ const variants = variant({
           backgroundColor: 'secondary.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) =>
-                        `0 0 0 .2rem ${theme.colors.secondary.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.secondary.default}75`
         }
       }
     },
@@ -88,8 +86,7 @@ const variants = variant({
           backgroundColor: 'success.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) =>
-                        `0 0 0 .2rem ${theme.colors.success.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.success.default}75`
         }
       }
     },
@@ -103,8 +100,7 @@ const variants = variant({
           backgroundColor: 'danger.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) =>
-                        `0 0 0 .2rem ${theme.colors.danger.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.danger.default}75`
         }
       }
     },
@@ -118,8 +114,7 @@ const variants = variant({
           backgroundColor: 'warning.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) =>
-                        `0 0 0 .2rem ${theme.colors.warning.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.warning.default}75`
         }
       }
     },
@@ -133,8 +128,7 @@ const variants = variant({
           backgroundColor: 'info.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (props: Theme) =>
-                        `0 0 0 .2rem ${props.colors.info.default}75`
+          boxShadow: (props: Theme) => `0 0 0 .2rem ${props.colors.info.default}75`
         }
       }
     },
@@ -153,26 +147,40 @@ const variants = variant({
 })
 
 export const Button: React.FC<ButtonProps> = styled.button<ButtonProps>`
-    ${variants}
-    ${color}
-    ${typography}
-    ${fontSize}
-    ${space}
-    ${position}
-    ${flexbox}
-    ${grid}
-    ${layout}
-    ${border}
-    ${system({ transition: true, animationFillMode: true })}
-    ${({ styling, outline, theme }: ButtonProps & { theme: Theme }) =>
-        outline &&
-        `
-        background-color: transparent;
-        color: ${theme.colors[styling]?.default};
-        &:hover {
-            color: #fff;
-        }
-    `}
+  ${variants}
+  ${color}
+  ${typography}
+  ${fontSize}
+  ${space}
+  ${position}
+  ${flexbox}
+  ${grid}
+  ${layout}
+  ${border}
+  ${system({ transition: true, animationFillMode: true })}
+  ${({ styling, outline, size, theme }: ButtonProps & { theme: Theme }) =>
+  outline &&
+  `
+      background-color: transparent;
+      color: ${theme.colors[styling]?.default};
+      &:hover {
+          color: #fff;
+      }
+  `}
+  ${(props) => props.size === 'small' &&
+  `
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+  `}
+  ${(props) => props.size === 'large' &&
+  `
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+  `}
 `
 
 export default Button

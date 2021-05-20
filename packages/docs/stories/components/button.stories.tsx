@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { addParameters, Meta } from '@storybook/react'
 import { Button } from '../../../quarks'
 
@@ -16,24 +16,24 @@ const storie: Meta = {
   argTypes: {
     children: {
       table: {
-        type: { summary: 'node' },
+        type: { summary: 'node' }
       }
     },
     styling: {
       control: {
         type: 'select',
-        options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'link', 'base'],
+        options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'link', 'base']
       },
       table: {
-        type: { summary: '"primary" | "secondary" | "success" | "danger" | "warning" | "info" | "link" | "base"' },
+        type: { summary: '"primary" | "secondary" | "success" | "danger" | "warning" | "info" | "link" | "base"' }
       }
     },
     outline: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
       table: {
         type: { summary: 'boolean' },
-        defaultValue: { summary: false },
+        defaultValue: { summary: false }
       }
     },
     size: {
@@ -44,17 +44,16 @@ const storie: Meta = {
       },
       table: {
         type: { summary: 'medium | small | large' },
-        defaultValue: { summary: 'medium' },
+        defaultValue: { summary: 'medium' }
       }
     }
   }
 }
 
+const Template = ({ children, ...args }: { children: ReactNode }): ReactElement<any, any> => <Button {...args}>{children}</Button>
 
-const Template = ({ children, ...args }) => <Button {...args}>{children}</Button>;
-
-export const Basic = (args) => <Button {...args} />;
-Basic.args = { styling: 'primary', children: 'Button' };
+export const Basic = (args): ReactElement => <Button {...args} />
+Basic.args = { styling: 'primary', children: 'Button' }
 
 // export const Basic = Template.bind({});
 // Basic.args = {
@@ -63,22 +62,22 @@ Basic.args = { styling: 'primary', children: 'Button' };
 // };
 
 addParameters({ docs: { previewSource: 'open' } })
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
   styling: 'primary',
-  children: 'Primary',
-};
+  children: 'Primary'
+}
 Primary.parameters = {
   withSource: 'none',
   previewTabs: {
     withSource: 'none',
 
-    docs: { hidden: true },
+    docs: { hidden: true }
   },
   docs: {
     withSource: 'none',
 
-    hidden: true,
+    hidden: true
     // source: {
     //   hidden: true,
 
@@ -86,39 +85,33 @@ Primary.parameters = {
     //   Template: <div>a</div>
 
     // }
-  },
+  }
   // control: false
 }
 
-
-
-export const Secondary = Template.bind({});
+export const Secondary = Template.bind({})
 Secondary.args = {
   styling: 'secondary',
-  children: 'Secondary',
-};
+  children: 'Secondary'
+}
 
-export const Success = Template.bind({});
+export const Success = Template.bind({})
 Success.args = {
   styling: 'success',
-  children: 'Success',
-};
+  children: 'Success'
+}
 
-export const Danger = Template.bind({});
+export const Danger = Template.bind({})
 Danger.args = {
   styling: 'danger',
-  children: 'Danger',
-};
+  children: 'Danger'
+}
 
-
-export const All = () => (
+export const All = (): ReactElement => (
   <>
     <Button styling="primary">Primary</Button>
     <Button styling="success">Success</Button>
   </>
 )
 
-
 export default storie
-
-

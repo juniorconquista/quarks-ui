@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { Meta } from '@storybook/react'
 import { Span } from '../../../quarks/typography'
 
@@ -44,7 +44,7 @@ const storie: Meta = {
   }
 }
 
-const Template = ({ children, ...args }) => <Span {...args}>{children}</Span>
+const Template = ({ children, ...args }: { children: ReactNode }): ReactElement<any, any> => <Span {...args}>{children}</Span>
 
 export const Base = Template.bind({})
 Base.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: '16px', textAlign: 'left', letterSpacing: '0' }

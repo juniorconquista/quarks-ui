@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { Meta } from '@storybook/react'
 import { H1 } from '../../../quarks/typography'
 
@@ -49,7 +49,7 @@ const storie: Meta = {
   }
 }
 
-const Template = ({ children, ...args }) => <H1 {...args}>{children}</H1>
+const Template = ({ children, ...args }: { children: ReactNode }): ReactElement<any, any> => <H1 {...args}>{children}</H1>
 
 export const Base = Template.bind({})
 Base.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: '32px', textAlign: 'left', letterSpacing: '0' }
