@@ -46,7 +46,10 @@ const storie: Meta = {
 
 const Template = ({ children, ...args }: { children: ReactNode }): ReactElement => <Label {...args}>{children}</Label>
 
+export const Playground = Template.bind({})
+Playground.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: 'base', textAlign: 'left', letterSpacing: '0' }
+
 export const Base = Template.bind({})
-Base.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: 'base', textAlign: 'left', letterSpacing: '0' }
+Base.args = { children: 'title', styling: 'base' }
 
 export default storie
