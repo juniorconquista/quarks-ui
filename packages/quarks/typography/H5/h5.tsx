@@ -1,25 +1,10 @@
 import styled from 'styled-components'
-import { variant, color, typography, space } from 'styled-system'
+import { color, typography, space } from 'styled-system'
 import { H5Props } from './h5.types'
-
-const variants = variant({
-  prop: 'styling',
-  variants: {
-    base: {
-      color: 'text.default',
-      fontSize: 2
-    },
-    get light () {
-      return {
-        ...this.base,
-        fontWeight: 'normal'
-      }
-    }
-  }
-})
+import { styling } from './h5.variants'
 
 export const H5: React.FC<H5Props> = styled.h5`
-    ${variants}
+    ${styling}
     ${color}
     ${typography}
     ${space}

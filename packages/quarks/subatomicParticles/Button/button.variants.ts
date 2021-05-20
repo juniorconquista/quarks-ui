@@ -7,10 +7,10 @@ export const styling = variant({
     base: {
       background: 'none',
       border: '1px solid transparent',
-      borderRadius: '.25rem',
+      borderRadius: 'md',
       display: 'inline-block',
-      fontSize: '1rem', // Assumes the browser default, typically `16px`'
-      fontWeight: 400,
+      fontSize: 'base', // Assumes the browser default, typically `16px`'
+      fontWeight: 'regular',
       lineHeight: '1.5',
       padding: '.375rem .75rem',
       textAlign: 'center',
@@ -39,7 +39,7 @@ export const styling = variant({
         ...this.base,
         backgroundColor: 'primary.default',
         borderColor: 'primary.default',
-        color: '#fff',
+        color: 'primary.contrast',
         '&:hover, &.hover': {
           backgroundColor: 'primary.hover'
         },
@@ -54,7 +54,7 @@ export const styling = variant({
         ...this.base,
         backgroundColor: 'secondary.default',
         borderColor: 'secondary.default',
-        color: '#fff',
+        color: 'secondary.contrast',
         '&:hover, &.hover': {
           backgroundColor: 'secondary.hover'
         },
@@ -69,7 +69,7 @@ export const styling = variant({
         ...this.base,
         backgroundColor: 'success.default',
         borderColor: 'success.default',
-        color: '#fff',
+        color: 'success.contrast',
         '&:hover, &.hover': {
           backgroundColor: 'success.hover'
         },
@@ -84,7 +84,7 @@ export const styling = variant({
         ...this.base,
         backgroundColor: 'danger.default',
         borderColor: 'danger.default',
-        color: '#fff',
+        color: 'danger.contrast',
         '&:hover, &.hover': {
           backgroundColor: 'danger.hover'
         },
@@ -99,7 +99,7 @@ export const styling = variant({
         ...this.base,
         backgroundColor: 'warning.default',
         borderColor: 'warning.default',
-        color: '#000',
+        color: 'warning.contrast',
         '&:hover, &.hover': {
           backgroundColor: 'warning.hover'
         },
@@ -114,7 +114,7 @@ export const styling = variant({
         ...this.base,
         backgroundColor: 'info.default',
         borderColor: 'info.default',
-        color: '#000',
+        color: 'info.contrast',
         '&:hover, &.hover': {
           backgroundColor: 'info.hover'
         },
@@ -141,11 +141,17 @@ export const styling = variant({
 export const sizes = variant({
   prop: 'size',
   variants: {
+    small: {
+      padding: '0.25rem 0.5rem',
+      fontSize: 'sm',
+      lineHeight: 1.5,
+      borderRadius: 'sm'
+    },
     large: {
       padding: '0.5rem 1rem',
-      fontSize: '1.25rem',
+      fontSize: 'lg',
       lineHeight: 1.5,
-      borderRadius: '0.3rem'
+      borderRadius: 'lg'
     }
   }
 })

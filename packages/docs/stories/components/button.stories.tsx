@@ -52,8 +52,8 @@ const storie: Meta = {
 
 const Template = ({ children, ...args }: { children: ReactNode }): ReactElement => <Button {...args}>{children}</Button>
 
-export const Basic = (args): ReactElement => <Button {...args} />
-Basic.args = { styling: 'primary', children: 'Button' }
+export const Playground = (args): ReactElement => <Button {...args} />
+Playground.args = { styling: 'primary', children: 'Button' }
 
 export const Primary = Template.bind({})
 Primary.args = {

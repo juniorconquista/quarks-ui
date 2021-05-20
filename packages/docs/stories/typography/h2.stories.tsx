@@ -28,7 +28,7 @@ const storie: Meta = {
     },
     fontSize: {
       table: {
-        defaultValue: { summary: '24px / 1.5rem' }
+        defaultValue: { summary: 'h2' }
       }
     },
     textAlign: {
@@ -51,10 +51,13 @@ const storie: Meta = {
 
 const Template = ({ children, ...args }: { children: ReactNode }): ReactElement => <H2 {...args}>{children}</H2>
 
+export const Playground = Template.bind({})
+Playground.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: 'h2', textAlign: 'left', letterSpacing: '0' }
+
 export const Base = Template.bind({})
-Base.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: '24px', textAlign: 'left', letterSpacing: '0' }
+Base.args = { children: 'title', styling: 'base' }
 
 export const light = Template.bind({})
-light.args = { children: 'title', styling: 'light', color: 'text.default', fontSize: '24px', textAlign: 'left', letterSpacing: '0' }
+light.args = { children: 'title', styling: 'light' }
 
 export default storie

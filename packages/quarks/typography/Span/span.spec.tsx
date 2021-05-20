@@ -23,7 +23,7 @@ describe('Span', () => {
   it('should inherit the styling properties of the base variant', () => {
     const { sut } = makeSut(<Span styling="base" />)
     expect(sut).toHaveStyleRule('color', theme.colors.text.default)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[4])
+    expect(sut).toHaveStyleRule('font-size', theme.fontSizes.base)
   })
 
   it('should apply custom styling properties', () => {

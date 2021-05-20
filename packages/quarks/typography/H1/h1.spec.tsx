@@ -23,14 +23,14 @@ describe('H1 component', () => {
   it('should inherit the styling properties of the base variant', () => {
     const { sut } = makeSut(<H1 styling="base" />)
     expect(sut).toHaveStyleRule('color', theme.colors.text.default)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[8])
+    expect(sut).toHaveStyleRule('font-size', theme.fontSizes.h1)
   })
 
   it('should inherit the styling properties of the light variant', () => {
     const { sut } = makeSut(<H1 styling="light" />)
     expect(sut).toHaveStyleRule('color', theme.colors.text.default)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[8])
-    expect(sut).toHaveStyleRule('font-weight', 'normal')
+    expect(sut).toHaveStyleRule('font-size', theme.fontSizes.h1)
+    expect(sut).toHaveStyleRule('font-weight', '400')
   })
 
   it('should apply custom styling properties', () => {

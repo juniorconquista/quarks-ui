@@ -23,7 +23,7 @@ describe('Small component', () => {
   it('should inherit the styling properties of the base variant', () => {
     const { sut } = makeSut(<Small styling="base" />)
     expect(sut).toHaveStyleRule('color', theme.colors.text.default)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[2])
+    expect(sut).toHaveStyleRule('font-size', theme.fontSizes.sm)
   })
 
   it('should apply custom styling properties', () => {

@@ -1,19 +1,10 @@
 import styled from 'styled-components'
-import { variant, color, typography, space, layout, system } from 'styled-system'
+import { color, typography, space, layout, system } from 'styled-system'
 import { PProps } from './p.types'
-
-const variants = variant({
-  prop: 'styling',
-  variants: {
-    base: {
-      color: 'text.default',
-      fontSize: 4
-    }
-  }
-})
+import { styling } from './p.variants'
 
 export const P: React.FC<PProps> = styled.p`
-    ${variants}
+    ${styling}
     ${layout}
     ${color}
     ${typography}
