@@ -57,9 +57,50 @@ type Color = {
   ligth: string
 }
 
+type FontSizes = {
+  base: string
+  sm: string
+  lg: string
+  h1: string
+  h2: string
+  h3: string
+  h4: string
+  h5: string
+  h6: string
+}
+
+type FontWeights = {
+  thin: number
+  light: number
+  regular: number
+  medium: number
+  semiBold: number
+  bold: number
+  black: number
+}
+
+type Spaces = {
+  none: string
+  xs: string
+  sm: string
+  md: string
+  lg: string
+  xl: string
+}
+
+type Radii = {
+  none: string
+  sm: string
+  md: string
+  lg: string
+}
+
 export interface Theme {
-  fontSizes: string[]
   colors: {
     [key: string]: Color
   }
+  fontSizes: FontSizes
+  fontWeights: FontWeights
+  spaces: Spaces
+  radii: Radii
 }

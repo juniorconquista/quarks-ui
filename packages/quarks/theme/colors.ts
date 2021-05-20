@@ -5,44 +5,49 @@ export default (dark = false): any => ({
   get primary () {
     return {
       default: this.dark ? '#375a7f' : '#007bff',
-      contrast: this.dark ? '#2f75bf' : '#6aa5e4',
       dark: '#375a7f',
-      light: '#007bff'
+      light: '#007bff',
+      contrast: '#f8f9fa'
     }
   },
   get secondary () {
     return {
       default: this.dark ? '#444444' : '#6c757d',
       dark: '#444444',
-      light: '#6c757d'
+      light: '#6c757d',
+      contrast: '#f8f9fa'
     }
   },
   get success () {
     return {
       default: this.dark ? '#00bc8c' : '#28a745',
       dark: '#00bc8c',
-      light: '#28a745'
+      light: '#28a745',
+      contrast: '#f8f9fa'
     }
   },
   get danger () {
     return {
       default: this.dark ? '#e74c3c' : '#dc3545',
       dark: '#e74c3c',
-      light: '#dc3545'
+      light: '#dc3545',
+      contrast: '#f8f9fa'
     }
   },
   get warning () {
     return {
       default: this.dark ? '#f39c12' : '#ffc107',
       dark: '#f39c12',
-      light: '#ffc107'
+      light: '#ffc107',
+      contrast: '#343a40'
     }
   },
   get info () {
     return {
       default: this.dark ? '#3498db' : '#17a2b8',
       dark: '#3498db',
-      light: '#17a2b8'
+      light: '#17a2b8',
+      contrast: '#f8f9fa'
     }
   },
   get background () {

@@ -1,11 +1,12 @@
 import colors from './colors'
-import { breakpoints, space, fontSizes, radii } from './sizes'
+import { breakpoints, fontSizes, fontWeights, radii, space } from './sizes'
 
 const theme = {
-  fontSizes,
-  space,
   breakpoints,
+  fontSizes,
+  fontWeights,
   radii,
+  space,
   colors: colors()
 }
 

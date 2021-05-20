@@ -1,19 +1,10 @@
 import styled from 'styled-components'
-import { variant, color, typography, space } from 'styled-system'
+import { color, typography, space } from 'styled-system'
 import { SpanProps } from './span.types'
-
-const variants = variant({
-  prop: 'styling',
-  variants: {
-    base: {
-      color: 'text.default',
-      fontSize: 4
-    }
-  }
-})
+import { styling } from './span.variants'
 
 export const Span: React.FC<SpanProps> = styled.span`
-    ${variants}
+    ${styling}
     ${color}
     ${typography}
     ${space}

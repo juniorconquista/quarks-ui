@@ -91,7 +91,7 @@ describe('Box component', () => {
       <Box
         styling="row"
         border="1px solid"
-        color={theme.colors.primary}
+        color={theme.colors.primary.default}
       />
     )
     expect(sut).toHaveStyleRule('color', theme.colors.primary.default)
@@ -131,8 +131,8 @@ describe('Box component', () => {
   })
 
   it('should apply custom position styling properties', () => {
-    const { sut } = makeSut(<Box styling="row" m="xxs" />)
-    expect(sut).toHaveStyleRule('margin', theme.space.xxs)
+    const { sut } = makeSut(<Box styling="row" m="xs" />)
+    expect(sut).toHaveStyleRule('margin', theme.space.xs)
     expect(sut).toHaveStyleRule('display', 'flex')
     expect(sut).toHaveStyleRule('flex-direction', 'row')
     expect(sut).toHaveStyleRule('justify-content', 'center')
@@ -143,8 +143,8 @@ describe('Box component', () => {
   })
 
   it('should apply custom typography styling properties', () => {
-    const { sut } = makeSut(<Box styling="base" fontSize={8} />)
-    expect(sut).toHaveStyleRule('font-size', theme.fontSizes[8])
+    const { sut } = makeSut(<Box styling="base" fontSize='lg' />)
+    expect(sut).toHaveStyleRule('font-size', theme.fontSizes.lg)
     expect(sut).toHaveStyleRule('display', 'flex')
     expect(sut).toHaveStyleRule('flex-direction', 'column')
     expect(sut).toHaveStyleRule('justify-content', 'center')
