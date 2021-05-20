@@ -23,7 +23,7 @@ const storie: Meta = {
     },
     fontSize: {
       table: {
-        defaultValue: { summary: '16px / 1rem' }
+        defaultValue: { summary: 'base' }
       }
     },
     textAlign: {
@@ -47,6 +47,6 @@ const storie: Meta = {
 const Template = ({ children, ...args }: { children: ReactNode }): ReactElement => <P {...args}>{children}</P>
 
 export const Base = Template.bind({})
-Base.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: '16px', textAlign: 'left', letterSpacing: '0' }
+Base.args = { children: 'title', styling: 'base', color: 'text.default', fontSize: 'base', textAlign: 'left', letterSpacing: '0' }
 
 export default storie
