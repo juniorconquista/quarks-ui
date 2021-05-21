@@ -1,5 +1,4 @@
 import React from 'react';
-import { addReadme } from 'storybook-readme';
 import ThemeProvider from './themeProvider'
 
 export const decorators = [
@@ -7,6 +6,13 @@ export const decorators = [
         <ThemeProvider>
             <Story />
         </ThemeProvider>
-    ),
-    addReadme
+    )
 ];
+
+export const parameters = {
+    options: {
+        storySort: {
+            order: ['Intro', 'Layout', 'Typography', 'Components'],
+        },
+    },
+};

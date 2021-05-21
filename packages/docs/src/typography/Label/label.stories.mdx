@@ -1,0 +1,98 @@
+<Meta title="Typography/Label/Get started" />
+
+# Label
+
+The _label_ element is the formal way of defining a label for an HTML form widget. This is the most important element if you want to create accessible forms - when implemented correctly, screen readers will speak the label of a form element along with related instructions.
+
+## Usage
+
+```javascript
+import { Label } from 'quarks-ui';
+```
+
+## Customization
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<Label styling="base" color='blue'>label</Label>
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<Label color='gray.0'>label</Label>
+
+// raw CSS color value
+<Label color='#f00'>label</Label>
+
+// background colors
+<Label bg='blue'>label</Label>
+
+// verbose prop
+<Label backgroundColor='blue'>label</Label>
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+```javascript
+// sets margin value of `theme.space[2]`
+<Label styling="base" m={2}>label</Label>
+
+// sets a margin value of `16px` since it's greater than `theme.space.length`
+<Label m={16}>label</Label>
+
+// sets margin `'auto'`
+<Label m='auto'>label</Label>
+
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<Label m={{ mobile:2, tablet:3, desktop:4 }}>label</Label>
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+<Playground>
+    <Label styling="base" fontSize={4}>
+        label
+    </Label>
+</Playground>
+
+```javascript
+// font-size of `theme.fontSizes[4]`
+<Label styling="base" fontSize={4}>label</Label>
+
+// font-size `32px`
+<Label fontSize={32}>label</Label>
+
+// font-size `'2em'`
+<Label fontSize='2em'>label</Label>
+
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<Label fontSize={{ mobile:10, desktop:12 }}>label</Label>
+
+// fontFamily
+<Label fontFamily='mono'>label</Label>
+
+// textAlign
+<Label textAlign='center'>label</Label>
+<Label textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>label</Label>
+
+// lineHeight
+<Label lineHeight='1.25'>label</Label>
+
+// fontWeight
+<Label fontWeight='bold'>label</Label>
+
+// letterSpacing
+<Label letterSpacing='0.1em'>label</Label>
+```
