@@ -1,0 +1,102 @@
+<Meta title="Typography/Span/Get started" />
+
+# Span
+
+The _Span_ tag is an inline container used to mark up a part of a text, or a part of a document.
+
+## Usage
+
+```javascript
+import { Span } from 'quarks-ui';
+```
+
+## Best practices
+
+-   The _Span_ tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+-   The _Span_ tag is much like the _div_ element, but _div_ is a block-level element and _Span_ is an inline element.
+
+<br/>
+
+## Customization
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+```javascript
+
+// picks the value defined in `theme.colors.blue`
+<Span styling="base" color='blue'>span</Span>
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<Span color='gray.0'>span</Span>
+
+// raw CSS color value
+<Span color='#f00'>span</Span>
+
+// background colors
+<Span bg='blue'>span</Span>
+
+// verbose prop
+<Span backgroundColor='blue'>span</Span>
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+```javascript
+
+// sets margin value of `theme.space[2]`
+<Span styling="base" m={2}>span</Span>
+
+// sets a margin value of `16px` since it's greater than `theme.space.length`
+<Span m={16}>span</Span>
+
+// sets margin `'auto'`
+<Span m='auto'>span</Span>
+
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<Span m={{ mobile:2, tablet:3, desktop:4 }}>span</Span>
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+```javascript
+
+// font-size of `theme.fontSizes[8]`
+<Span styling="base" fontSize={8}>span</Span>
+
+// font-size `32px`
+<Span fontSize={32}>span</Span>
+
+// font-size `'2em'`
+<Span fontSize='2em'>span</Span>
+
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<Span fontSize={{ mobile:10, desktop:12 }}>span</Span>
+
+// fontFamily
+<Span fontFamily='mono'>span</Span>
+
+// textAlign
+<Span textAlign='center'>span</Span>
+<Span textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>span</Span>
+
+// lineHeight
+<Span lineHeight='1.25'>span</Span>
+
+// fontWeight
+<Span fontWeight='bold'>span</Span>
+
+// letterSpacing
+<Span letterSpacing='0.1em'>span</Span>
+```

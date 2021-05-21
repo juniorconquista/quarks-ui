@@ -1,0 +1,100 @@
+<Meta title="Typography/H5/Get started" />
+
+# H5
+
+Search engines use the headings to index the structure and content of your web pages. Users often skim a page by its headings. It is important to use headings to show the document structure.
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS _font-size_ property.
+
+## Usage
+
+```javascript
+import { H5 } from 'quarks-ui';
+```
+
+## Best practices
+
+- Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
+<br/>
+
+## Customization
+
+### Color
+
+The color utility parses a component's _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<H5 styling="base" color='blue'>h5</H5>
+
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<H5 color='gray.0'>h5</H5>
+
+// raw CSS color value
+<H5 color='#f00'>h5</H5>
+
+// background colors
+<H5 bg='blue'>h5</H5>
+
+// verbose prop
+<H5 backgroundColor='blue'>h5</H5>
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+```javascript
+// sets margin value of `theme.space[2]`
+<H5 styling="base" m={2}>Title</H5>
+
+// sets a margin value of `16px` since it's greater than `theme.space.length`
+<H5 m={16}>Title</H5>
+
+// sets margin `'auto'`
+<H5 m='auto'>Title</H5>
+
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<H5 m={{ mobile:2, tablet:3, desktop:4 }}>Title</H5>
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+```javascript
+// font-size of `theme.fontSizes[2]`
+<H5 styling="base" fontSize={2}>h5</H5>
+
+// font-size `32px`
+<H5 fontSize={32}>h5</H5>
+
+// font-size `'2em'`
+<H5 fontSize='2em'>h5</H5>
+
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<H5 fontSize={{ mobile:10, desktop:12 }}>h5</H5>
+
+// fontFamily
+<H5 fontFamily='mono'>h5</H5>
+
+// textAlign
+<H5 textAlign='center'>h5</H5>
+<H5 textAlign={{ mobile: 'center', tablet: 'left', desktop: 'center' }}>h5</H5>
+
+// lineHeight
+<H5 lineHeight='1.25'>h5</H5>
+
+// fontWeight
+<H5 fontWeight='bold'>h5</H5>
+
+// letterSpacing
+<H5 letterSpacing='0.1em'>h5</H5>
+```
