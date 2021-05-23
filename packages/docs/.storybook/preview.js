@@ -1,12 +1,11 @@
 import React from 'react';
+
 import ThemeProvider from './themeProvider'
 
 export const decorators = [
-    (Story) => (
-        <ThemeProvider>
-            <Story />
-        </ThemeProvider>
-    )
+    renderStory => {
+        return <ThemeProvider>{renderStory()}</ThemeProvider>
+    },
 ];
 
 export const parameters = {
@@ -16,3 +15,6 @@ export const parameters = {
         },
     },
 };
+
+
+

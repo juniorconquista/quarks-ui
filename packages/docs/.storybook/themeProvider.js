@@ -1,6 +1,7 @@
 import React from 'react'
-import { useDarkMode } from 'storybook-dark-mode';
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { useDarkMode } from 'storybook-dark-mode';
+import { themes } from '@storybook/theming';
 
 import theme from '../../quarks/theme'
 import colors from '../../quarks/theme/colors'
@@ -9,25 +10,28 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fontFamily};
   }
+  .sbdocs-content > div[id^='anchor--'] .docs-story > div {
+    background: ${(props) => props.theme.colors.dark ? themes.dark.appBg : themes.light.appContentBg}
+  } 
 `;
 
 export default ({ children }) => {
+  const isDark = useDarkMode()
+  const colorsTheme = {
+    ...theme.colors,
+    ...colors(isDark),
+  };
 
-    const colorsTheme = {
-        ...theme.colors,
-        ...colors(useDarkMode()),
-    };
-
-    return (
-        <ThemeProvider
-            theme={{
-                ...theme,
-                colors: colorsTheme,
-                fontFamily: 'Roboto Mono, monospace',
-            }}
-        >
-            {children}
-            <GlobalStyle />
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider
+      theme={{
+        ...theme,
+        colors: colorsTheme,
+        fontFamily: 'Roboto Mono, monospace',
+      }}
+    >
+      {children}
+      <GlobalStyle />
+    </ThemeProvider>
+  )
 }

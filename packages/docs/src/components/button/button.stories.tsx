@@ -52,17 +52,6 @@ Primary.args = {
   styling: 'primary',
   children: 'Primary'
 }
-Primary.parameters = {
-  withSource: 'none',
-  previewTabs: {
-    withSource: 'none',
-    docs: { hidden: true }
-  },
-  docs: {
-    withSource: 'none',
-    hidden: true
-  }
-}
 
 export const Secondary = Template.bind({})
 Secondary.args = {
