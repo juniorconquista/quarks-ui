@@ -35,7 +35,7 @@ const storie: Meta = {
         options: ['small', 'medium', 'large']
       },
       table: {
-        type: { summary: 'medium | small | large' },
+        type: { summary: 'small | medium | large' },
         defaultValue: { summary: 'medium' }
       }
     }
@@ -73,8 +73,8 @@ Danger.args = {
 
 export const All = (): ReactElement => (
   <>
-    <Button styling="primary">Primary</Button>
-    <Button styling="success">Success</Button>
+    <Button styling="primary" size="small">Primary</Button>
+    <Button styling="success" size="large">Success</Button>
   </>
 )
 
