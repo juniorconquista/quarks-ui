@@ -6,15 +6,156 @@ The `<Button>` tag defines a clickable button.
 
 Inside a `<Button>` element you can put text (and tags like `<i>`, `<b>`, `<strong>`, `<br>`, `<img>`, etc.). That is not possible with a button created with the `<input>` element!
 
-## Usage
-
-```javascript
-import { Button } from 'quarks-ui';
-```
+Buttons make common actions more obvious and help users more easily perform them. Buttons use labels and sometimes icons to communicate the action that will occur when the user touches them.
 
 ## Best practices
 
-- Always specify the `type` attribute for a `<Button>` element, to tell browsers what type of button it is.
+- Group buttons logically into sets based on usage and importance.
+- Ensure that button actions are clear and consistent.
+- The main action of a group set can be a primary button.
+- Select a single button variation and do not mix them.
 
-<br/>
+## Usage
 
+```javascript
+import { Button } from "quarks-ui";
+```
+
+## Customization
+
+### Block
+
+Create block level buttons—those that span the full width of a parent—by adding prop _block_
+
+```javascript
+<Button styling="primary" block>Button</Button>
+<Button styling="secondary" block>Button</Button>
+```
+
+### Border
+
+The border utility includes style props for _border_, _borderWidth_, _borderStyle_, _borderColor_, _borderRadius_, _borderTop_, _borderTopWidth_, _borderTopStyle_, _borderTopColor_, _borderTopLeftRadius_, _borderTopRightRadius_, _borderRight_, _borderRightWidth_, _borderRightStyle_, _borderRightColor_, _borderBottom_, _borderBottomWidth_, _borderBottomStyle_, _borderBottomColor_, _borderBottomLeftRadius_, _borderBottomRightRadius_, _borderLeft_, _borderLeftWidth_, _borderLeftStyle_, _borderLeftColor_, _borderX_, and _borderY_.
+
+You can see all the border customization [here](https://styled-system.com/api#border).
+
+```javascript
+<Button styling="primary" border="1px solid">Button</Button>
+<Button styling="primary" borderTop="1px solid">Button</Button>
+<Button styling="primary" borderRight="1px solid">Button</Button>
+<Button styling="primary" borderBottom="1px solid">Button</Button>
+<Button styling="primary" borderLeft="1px solid">Button</Button>
+// borderWidth
+<Button styling="primary" borderWidth="4px">Button</Button>
+// borderStyle
+<Button styling="primary" borderStyle="dotted">Button</Button>
+// borderColor
+<Button styling="primary" borderColor="blue">Button</Button>
+// borderRadius
+<Button styling="primary" borderRadius={4}>Button</Button>
+```
+
+### Color
+
+The color utility parses a component"s _color_ and _bg_ props and converts them into CSS declarations. By default the raw value of the prop is returned. Color palettes can be configured with the ThemeProvider to use keys as prop values, with support for dot notation.
+
+You can see all the color customization [here](https://styled-system.com/api/#color).
+
+```javascript
+// picks the value defined in `theme.colors.blue`
+<Button styling="primary" color="blue">Button</Button>
+// picks up a nested color value using dot notation `theme.colors.gray[0]`
+<Button  styling="primary" color="gray.0">Button</Button>
+// raw CSS color value
+<Button  styling="primary" color="#f00">Button</Button>
+// background colors
+<Button  styling="primary" bg="blue">Button</Button>
+// verbose prop
+<Button  styling="primary" backgroundColor="blue">Button</Button>
+```
+
+### Outline
+
+In need of a button, but not the hefty background colors they bring? add props _outline_ to remove all background images and colors on any button.
+
+```javascript
+<Button styling="primary" outline>Button</Button>
+<Button styling="secondary" outline>Button</Button>
+```
+
+### Text
+
+Text buttons are typically used for less-pronounced actions.
+
+```javascript
+<Button styling="primary" text>Button</Button>
+<Button styling="secondary" text>Button</Button>
+```
+
+### Typography
+
+Typography props include _fontFamily_, _fontSize_, _fontWeight_, _lineHeight_, _letterSpacing_, _textAlign_, and _fontStyle_.
+
+You can see all the typography customization [here](https://styled-system.com/api/#typography).
+
+```javascript
+// font-size of `theme.fontSizes.lg`
+<Button styling="primary" fontSize="lg">Button</Button>
+// font-size `32px`
+<Button styling="primary" fontSize={32}>Button</Button>
+// font-size `"2em"`
+<Button styling="primary" fontSize="2em">Button</Button>
+// font-size `10px` on all viewports and `12px` from the first breakpoint and up
+<Button styling="primary" fontSize={{ mobile:10, desktop:12 }}>Button</Button>
+// fontFamily
+<Button styling="primary" fontFamily="mono">Button</Button>
+// textAlign
+<Button styling="primary" textAlign="center">Button</Button>
+<Button styling="primary" textAlign={{ mobile: "center", tablet: "left", desktop: "center" }}>Button</Button>
+// lineHeight
+<Button styling="primary" lineHeight="1.25">Button</Button>
+// fontWeight
+<Button styling="primary" fontWeight="bold">Button</Button>
+// letterSpacing
+<Button styling="primary" letterSpacing="0.1em">Button</Button>
+```
+
+### Position
+
+The position utility includes style props for _position_, _zIndex_, _top_, _right_, _bottom_, and _left_.
+
+You can see all the position customization [here](https://styled-system.com/api/#position).
+
+```javascript
+<Button styling="primary" position="absolute">Button</Button>
+<Button styling="primary" zIndex={16}>Button</Button>
+<Button styling="primary" top="0" right="0" bottom="0" left="0">Button</Button>
+```
+
+### Size
+
+Add size param to choose the button size. _sm_ to small and _lg_ to large
+
+```javascript
+// set size small
+<Button styling="primary" size="sm">Button</Button>
+// set size large
+<Button styling="primary" size="lg">Button</Button>
+```
+
+### Space
+
+The space utility converts shorthand margin and padding props to _margin_ and _padding_ CSS declarations.
+The sizes of space are _xs_, _sm_, _md_, _lg_ and _xl_.
+
+You can see all the space customization [here](https://styled-system.com/api#space).
+
+```javascript
+// sets margin value of `theme.space.sm`
+<Button styling="primary" m="sm">Button</Button>
+// sets a margin value of `16px` since it"s greater than `theme.space.length`
+<Button styling="primary" m={16}>Button</Button>
+// sets margin `"auto"`
+<Button styling="primary" m="auto">Button</Button>
+// sets margin `8px` fom mobile devices, `16px` for tablet and `32px` for desktop from the first breakpoint and up
+<Button styling="primary" m={{ mobile:2, tablet:3, desktop:4 }}>Button</Button>
+```
