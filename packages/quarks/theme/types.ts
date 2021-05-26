@@ -55,6 +55,8 @@ type Color = {
   default: string
   dark: string
   ligth: string
+  hover: string
+  contrast: string
 }
 
 type FontSizes = {

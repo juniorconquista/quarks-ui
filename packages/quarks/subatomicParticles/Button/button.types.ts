@@ -7,5 +7,8 @@ export interface ButtonProps extends ButtonStyledProps {
   styling?: 'base' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'link'
   size?: 'small' | 'medium' | 'large'
   outline?: boolean
+  disabled?: boolean
+  text?: boolean
+  block?: boolean
   css?: CSSProp
 }
