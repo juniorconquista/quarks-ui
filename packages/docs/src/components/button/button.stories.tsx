@@ -28,6 +28,22 @@ const storie: Meta = {
         defaultValue: { summary: false }
       }
     },
+    block: {
+      defaultValue: false,
+      control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false }
+      }
+    },
+    text: {
+      defaultValue: false,
+      control: 'boolean',
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: false }
+      }
+    },
     size: {
       defaultValue: 'medium',
       control: {
