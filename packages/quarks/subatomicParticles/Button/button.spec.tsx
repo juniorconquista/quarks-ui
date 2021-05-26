@@ -90,6 +90,18 @@ describe('Button component', () => {
     expect(sut).toHaveStyleRule('border-radius', theme.radii.lg)
   })
 
+  it('should inherit the styling properties of the block variant', () => {
+    const { sut } = makeSut(<Button styling="primary" block />)
+    expect(sut).toHaveStyleRule('width', '100%')
+  })
+
+  it('should inherit the styling properties of the text variant', () => {
+    const { sut } = makeSut(<Button styling="primary" text />)
+    expect(sut).toHaveStyleRule('background-color', 'transparent')
+    expect(sut).toHaveStyleRule('border-color', 'transparent')
+    expect(sut).toHaveStyleRule('color', theme.colors.primary.default)
+  })
+
   it('should inherit the sapce properties variant', () => {
     const { sut } = makeSut(<Button styling="primary" marginX="15px" paddingX="10px" />)
     expect(sut).toHaveStyleRule('margin-left', '15px')
