@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta } from '@storybook/react'
-import { Box } from '../../../../quarks'
+import { Box } from '@packages/quarks'
 
 const storie: Meta = {
   component: Box,

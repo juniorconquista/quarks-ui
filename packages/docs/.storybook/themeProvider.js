@@ -3,8 +3,8 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { useDarkMode } from 'storybook-dark-mode';
 import { themes } from '@storybook/theming';
 
-import theme from '../../quarks/theme'
-import colors from '../../quarks/theme/colors'
+import theme from '@packages/quarks/theme'
+import colors from '@packages/quarks/theme/colors'
 
 const GlobalStyle = createGlobalStyle`
   body {

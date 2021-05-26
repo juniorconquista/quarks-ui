@@ -1,5 +1,5 @@
 {
-  "name": "quarks-ui-docs",
+  "name": "@packages/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,9 @@
   },
   "author": "Júnior Conquista <conquista.engcomp@gmail.com>",
   "license": "MIT",
+  "dependencies": {
+    "@packages/quarks": "*"
+  },
   "devDependencies": {
     "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import { Meta } from '@storybook/react'
-import { Button, Box } from '../../../../quarks'
+import { Button, Box } from '@packages/quarks'
 
 const storie: Meta = {
   component: Button,

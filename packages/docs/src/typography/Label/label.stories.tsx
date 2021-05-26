@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react'
 import { Meta } from '@storybook/react'
-import { Label } from '../../../../quarks/typography'
+import { Label } from '@packages/quarks/typography'
 
 const storie: Meta = {
   component: Label,

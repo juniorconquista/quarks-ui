@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDarkMode } from 'storybook-dark-mode'
-import { Box, H1, H4, P, colors as colorsTheme } from '../../../../quarks'
+import { Box, H1, H4, P, colors as colorsTheme } from '@packages/quarks'
 
 interface Props {
   styling: string

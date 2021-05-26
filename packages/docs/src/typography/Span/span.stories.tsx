@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react'
 import { Meta } from '@storybook/react'
-import { Span } from '../../../../quarks/typography'
+import { Span } from '@packages/quarks/typography'
 
 const storie: Meta = {
   component: Span,

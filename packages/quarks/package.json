@@ -1,5 +1,5 @@
 {
-  "name": "quarks-ui",
+  "name": "@packages/quarks",
   "version": "0.0.31",
   "description": "",
   "main": "lib/index.js",

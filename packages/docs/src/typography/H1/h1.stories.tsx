@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from 'react'
 import { Meta } from '@storybook/react'
-import { H1 } from '../../../../quarks/typography'
+import { H1 } from '@packages/quarks/typography'
 
 const storie: Meta = {
   component: H1,
