@@ -9,9 +9,8 @@ import {
   system,
   typography
 } from 'styled-system'
-import { Theme } from 'quarks/theme/types'
 import { ButtonProps } from './button.types'
-import { sizes, styling } from './button.variants'
+import { sizes, styling, outline, text, block } from './button.variants'
 
 export const Button: React.FC<ButtonProps> = styled.button<ButtonProps>`
   ${layout}
@@ -24,15 +23,9 @@ export const Button: React.FC<ButtonProps> = styled.button<ButtonProps>`
   ${fontSize}
   ${sizes}
   ${system({ transition: true, animationFillMode: true })}
-  ${({ styling, outline, theme }: ButtonProps & { theme: Theme }) =>
-  outline &&
-  `
-  background-color: transparent;
-  color: ${theme.colors[styling]?.default ?? ''};
-  &:hover {
-    color: #fff;
-  }
-  `}
+  ${outline}
+  ${text}
+  ${block}
 `
 
 export default Button
