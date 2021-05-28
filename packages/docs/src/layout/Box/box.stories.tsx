@@ -6,46 +6,23 @@ const storie: Meta = {
   component: Box,
   title: 'Layout/Box',
   argTypes: {
-    // children: {
-    //   table: {
-    //     type: { summary: 'node' }
-    //   }
-    // },
     styling: {
       control: {
         type: 'select',
-        options: ['base', 'row', 'column', 'grid', 'overlay']
+        options: ['base', 'row', 'column', 'grid']
       },
       table: {
-        type: { summary: '"base" | "row" | "column" | "grid" | "overlay"' },
+        type: { summary: '"base" | "row" | "column" | "grid"' },
         defaultValue: { summary: 'base' }
       }
+    },
+    css: {
+      control: {
+        type: 'object'
+      },
+      type: { summary: 'Ex: {"background-color": "red"}' },
+      description: 'Here you can pass css properties to box component in json object format.'
     }
-    // color: {
-    //   table: {
-    //     defaultValue: { summary: 'text.default' }
-    //   }
-    // },
-    // fontSize: {
-    //   table: {
-    //     defaultValue: { summary: 'h1' }
-    //   }
-    // },
-    // textAlign: {
-    //   control: {
-    //     type: 'select',
-    //     options: ['left', 'center', 'right']
-    //   },
-    //   table: {
-    //     type: { summary: '"left" | "center" | "right"' },
-    //     defaultValue: { summary: 'left' }
-    //   }
-    // },
-    // letterSpacing: {
-    //   table: {
-    //     defaultValue: { summary: '0' }
-    //   }
-    // }
   }
 }
 
