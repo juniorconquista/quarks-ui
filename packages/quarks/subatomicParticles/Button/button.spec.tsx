@@ -9,9 +9,9 @@ type SutTypes = {
   sut: string
 }
 
-const makeSut = (component: ReactNode): SutTypes => {
+const makeSut = (component: ReactNode, themeSut: Object = theme): SutTypes => {
   const sut = renderer.create(
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeSut}>
       {component}
     </ThemeProvider>
   ).toJSON()
@@ -140,5 +140,60 @@ describe('Button component', () => {
     expect(sut).toHaveStyleRule('z-index', '2')
     expect(sut).toHaveStyleRule('top', '0')
     expect(sut).toHaveStyleRule('right', '0')
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the primary variant', () => {
+    const { sut } = makeSut(
+      <Button styling="primary" />,
+      {}
+    )
+    expect(sut).toHaveStyleRule('box-shadow', '0 0 0 .2rem 75', {
+      modifier: '&:focus'
+    })
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the secondary variant', () => {
+    const { sut } = makeSut(<Button styling="secondary" />, {})
+    expect(sut).toHaveStyleRule('box-shadow', '0 0 0 .2rem 75', {
+      modifier: '&:focus'
+    })
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the success variant', () => {
+    const { sut } = makeSut(<Button styling="success" />, {})
+    expect(sut).toHaveStyleRule('box-shadow', '0 0 0 .2rem 75', {
+      modifier: '&:focus'
+    })
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the danger variant', () => {
+    const { sut } = makeSut(<Button styling="danger" />, {})
+    expect(sut).toHaveStyleRule('box-shadow', '0 0 0 .2rem 75', {
+      modifier: '&:focus'
+    })
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the warning variant', () => {
+    const { sut } = makeSut(<Button styling="warning" />, {})
+    expect(sut).toHaveStyleRule('box-shadow', '0 0 0 .2rem 75', {
+      modifier: '&:focus'
+    })
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the info variant', () => {
+    const { sut } = makeSut(<Button styling="info" />, {})
+    expect(sut).toHaveStyleRule('box-shadow', '0 0 0 .2rem 75', {
+      modifier: '&:focus'
+    })
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the primary variant with outline applied', () => {
+    const { sut } = makeSut(<Button styling="primary" outline />, {})
+    expect(sut).toHaveStyleRule('color', 'primary.contrast')
+  })
+
+  it('should not break the rendering of the component if the theme is changed in the primary variant with text applied', () => {
+    const { sut } = makeSut(<Button styling="primary" text />, {})
+    expect(sut).toHaveStyleRule('color', 'primary.contrast')
   })
 })

@@ -46,7 +46,7 @@ export const styling = variant({
           borderColor: 'primary.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.primary.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors?.primary?.default ?? ''}75`
         }
       }
     },
@@ -61,7 +61,7 @@ export const styling = variant({
           borderColor: 'secondary.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.secondary.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors?.secondary?.default ?? ''}75`
         }
       }
     },
@@ -76,7 +76,7 @@ export const styling = variant({
           borderColor: 'success.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.success.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors?.success?.default ?? ''}75`
         }
       }
     },
@@ -91,7 +91,7 @@ export const styling = variant({
           borderColor: 'danger.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.danger.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors?.danger?.default ?? ''}75`
         }
       }
     },
@@ -106,7 +106,7 @@ export const styling = variant({
           borderColor: 'warning.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors.warning.default}75`
+          boxShadow: (theme: Theme) => `0 0 0 .2rem ${theme.colors?.warning?.default ?? ''}75`
         }
       }
     },
@@ -121,7 +121,7 @@ export const styling = variant({
           borderColor: 'info.hover'
         },
         '&:focus, &.focus': {
-          boxShadow: (props: Theme) => `0 0 0 .2rem ${props.colors.info.default}75`
+          boxShadow: (props: Theme) => `0 0 0 .2rem ${props.colors?.info?.default ?? ''}75`
         }
       }
     },
@@ -161,7 +161,7 @@ export const outline = ({ styling, outline, theme }: ButtonProps & { theme: Them
   outline &&
   `
     background-color: transparent;
-    color: ${theme.colors[styling]?.default ?? ''};
+    color: ${theme.colors?.[styling]?.default ?? 'primary.contrast'};
     &:hover {
       color: #fff;
     }
@@ -172,11 +172,11 @@ export const text = ({ styling, text, theme }: ButtonProps & { theme: Theme }): 
   `
       background-color: transparent;
       border-color: transparent;
-      color: ${theme.colors[styling]?.default ?? ''};
+      color: ${theme.colors?.[styling]?.default ?? ''};
       &:hover {
         background-color: transparent;
         border-color: transparent;
-        color: ${theme.colors[styling]?.hover ?? ''};
+        color: ${theme.colors?.[styling]?.hover ?? ''};
       }
   `
 
